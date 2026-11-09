@@ -243,6 +243,7 @@ nav.tabs a.on:after{content:"♥";font-size:11px}
   .open .sheet{transform:translateY(-50%);opacity:1;pointer-events:auto}
 }
 </style>
+<script data-goatcounter="https://gwguinnie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -601,7 +602,7 @@ function renderDates(){
 function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
 function spaced(ctx,txt,cx,y,sp){const ws=[...txt].map(ch=>ctx.measureText(ch).width);const tot=ws.reduce((a,b)=>a+b,0)+sp*(txt.length-1);let x=cx-tot/2;[...txt].forEach((ch,i)=>{ctx.fillText(ch,x,y);x+=ws[i]+sp});return tot}
 function fit(ctx,font,size,txt,maxW){let s=size;do{ctx.font=font.replace('#',s);if(ctx.measureText(txt).width<=maxW)break;s-=1}while(s>8);return s}
-async function drawTicket(){
+async function drawTicket(){gc('make-ticket');
   try{await Promise.all([document.fonts.load('700 40px BigSh'),document.fonts.load('400 10px DMMono'),document.fonts.load('700 13px Inter'),document.fonts.load('400 13px Inter'),document.fonts.load('600 13px Inter')])}catch(e){}
   const c=CITIES[tkCi],d=tkDate,[Y,M,D]=d.split('-');
   const name=document.getElementById('tkName').value.trim();
@@ -657,12 +658,14 @@ async function drawTicket(){
   if(window.innerWidth<900)document.getElementById('tkout').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function gc(p){try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true})}catch(e){}}
 let _dl;function getDL(){if(_dl===undefined)_dl=(window.claude&&window.claude.use?window.claude.use('downloads'):Promise.resolve(null)).catch(()=>null);return _dl}
 function wireSave(cv,fname,btnId,msgId,label){
   let blob=null;cv.toBlob(b=>blob=b,'image/png');
   const btn=document.getElementById(btnId),msg=document.getElementById(msgId);
   btn.onclick=async()=>{
     if(!blob){msg.textContent='one moment… then tap '+label+' again';return}
+    gc(label.toLowerCase().replace(/\s+/g,'-'));
     const inClaude=!!(window.claude&&window.claude.use);
     if(inClaude){const dl=await getDL();
       if(dl){try{await dl.save({filename:fname,data:blob});msg.textContent='saved ♥'}catch(e){const c=e&&e.code;msg.textContent=c==='declined'?'not saved — tap '+label+' to try again':c==='rate_limited'?'one moment… then tap again':'saving is not available here — screenshot it instead'}return}}
@@ -717,7 +720,7 @@ function reelHTML(i,t,state){
 function drawReels(states){const el=document.getElementById('reels');el.innerHTML=result.map((t,i)=>reelHTML(i,t,states[i])).join('');
   el.querySelectorAll('.reel').forEach(b=>b.onclick=()=>{const t=result[+b.dataset.i];if(t&&!spinning)openSong(t)})}
 function spin(){
-  if(spinning)return;spinning=true;
+  if(spinning)return;spinning=true;gc('pull-lever');
   const pick=[];while(pick.length<3){const t=rpick();if(!pick.includes(t))pick.push(t)}
   const st=['spin','spin','spin'];const stops=[900,1400,1900];const t0=performance.now();
   document.getElementById('slotst').textContent='▼ spinning…';document.getElementById('slipbar').classList.remove('on');document.getElementById('slipout').innerHTML='';
@@ -767,7 +770,7 @@ async function drawSlip(){
   out.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function initRandom(){
-  document.getElementById('slipBtn').onclick=drawSlip;
+  document.getElementById('slipBtn').onclick=()=>{gc('print-slip');drawSlip()};
   drawReels(['','','']);
   const nx='';
   document.getElementById('rfoot').textContent=`${POOL.length} songs · every album · tour main setlist excluded${nx}`;
@@ -786,7 +789,7 @@ function route(){const h=location.hash.slice(1);const v=VIEWS_OK.includes(h)?h:'
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
   document.querySelectorAll('nav.tabs a').forEach(x=>x.classList.toggle('on',x.dataset.v===v));
   if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);}
-window.addEventListener('hashchange',route);
+window.addEventListener('hashchange',()=>{route();gc('tab-'+(VIEWS_OK.includes(location.hash.slice(1))?location.hash.slice(1):'tour'))});
 renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();route();renderMap();
 })();
 
