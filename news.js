@@ -1,7 +1,21 @@
 /* News board data. items newest first, max 30. */
 window.NEWS={
- "updated": "2026-11-09T04:56:44Z",
+ "updated": "2026-11-10T14:42:13Z",
  "items": [
+  {
+   "date": "2026-11-10",
+   "cat": "member",
+   "text": "Jin tops Idol Pick weekly male idol vote for a 4th straight week (76 total wins); Namdaemun-ro billboard Nov 19–21.",
+   "source": "StarNews",
+   "url": "https://starnewskorea.com/en/music/2026/11/10/2026111008135721537"
+  },
+  {
+   "date": "2026-11-09",
+   "cat": "release",
+   "text": "BIGHIT announces \"BTS WORLD TOUR ARIRANG IN LONDON\" concert release as a QR-code package on Weverse Shop, out Dec 1.",
+   "source": "Weverse Shop",
+   "url": "https://shop.weverse.io/en/shop/USD/artists/2/sales/71784"
+  },
   {
    "date": "2026-11-08",
    "cat": "award",
