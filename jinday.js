@@ -1,0 +1,1 @@
+window.JINDAY={"updated":"","items":[]};
