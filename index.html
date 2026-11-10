@@ -88,7 +88,6 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .jdcard{display:flex;gap:12px;padding:10px;border:1.5px solid var(--pkb);border-radius:14px;background:#fff;cursor:pointer;text-align:left}
 .jdcard.sel{border:2px solid var(--pk);box-shadow:0 0 0 3px var(--pkl)}
 .jdimg{width:84px;height:106px;flex:none;border-radius:10px;background:var(--pkl);object-fit:cover;display:grid;place-items:center;overflow:hidden}
-.jdimg svg{width:48px;height:48px}
 .jdc{min-width:0;flex:1}
 .jdc b{display:block;font:600 15px/1.3 var(--sans)}
 .jdm{font:400 11px/1.5 var(--mono);color:#8a5b6a}
@@ -98,7 +97,10 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .jdbtn{border:1.5px solid var(--pk);border-radius:99px;padding:5px 12px;font:400 11.5px var(--mono);color:var(--pk2);background:#fff;text-decoration:none}
 .jdbtn.p{background:var(--pk);color:#fff}
 .jdfoot{padding:10px 14px 16px;text-align:center;font:400 11px var(--mono);color:#8a5b6a}
-.jdpin{width:34px;height:46px;transform-origin:50% 100%;transition:transform .15s;cursor:pointer}
+.jdpin{position:relative;width:40px;height:54px;transform-origin:50% 100%;transition:transform .15s;cursor:pointer}
+.jdpin svg{width:100%;height:100%;display:block}
+.jdpin span{position:absolute;left:0;right:0;top:6px;text-align:center;font:22px/28px 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
+.jdemo{font:44px/1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}
 .jdpin.sel{transform:scale(1.45)}
 .jdpin.sel path{fill:#e87ea3}
 @media(min-width:900px){.jdgrid{display:grid;grid-template-columns:1.15fr 1fr;align-items:start}#jdmap{height:560px;position:sticky;top:70px;border-bottom:0;border-right:2px solid var(--pkb)}.jdlist{max-height:none}}
@@ -834,7 +836,8 @@ function initRandom(){
 
 /* ---------- jin day ---------- */
 const JD=window.JINDAY||{items:[]};const JDKEY='AIzaSyB-F5u0-kAuR8-zzLQ2fLawWByIh1tfZ9I',JDMAPID='3983f8438e58b675a7fb295f';
-const HAM=(fill)=>`<svg viewBox="-30 -2 60 96" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 C-34 0 -40 30 -28 50 L0 92 L28 50 C40 30 34 0 0 0Z" fill="${fill}" stroke="#3a1622" stroke-width="3"/><circle cx="-16" cy="18" r="7" fill="#fff" stroke="#3a1622" stroke-width="2.5"/><circle cx="16" cy="18" r="7" fill="#fff" stroke="#3a1622" stroke-width="2.5"/><circle cx="-16" cy="18" r="3" fill="#f48fb1"/><circle cx="16" cy="18" r="3" fill="#f48fb1"/><ellipse cx="0" cy="38" rx="23" ry="19" fill="#fff" stroke="#3a1622" stroke-width="2.5"/><circle cx="-8" cy="33" r="2.6" fill="#3a1622"/><circle cx="8" cy="33" r="2.6" fill="#3a1622"/><ellipse cx="0" cy="39" rx="2.5" ry="1.8" fill="#e87ea3"/><path d="M-4 43 Q0 46 0 42 Q0 46 4 43" fill="none" stroke="#3a1622" stroke-width="1.6"/><ellipse cx="-15" cy="42" rx="4" ry="2.5" fill="#f48fb1"/><ellipse cx="15" cy="42" rx="4" ry="2.5" fill="#f48fb1"/></svg>`;
+const EMO="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif";
+const PIN=(fill)=>`<svg viewBox="-30 -2 60 96" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 C-34 0 -40 30 -28 50 L0 92 L28 50 C40 30 34 0 0 0Z" fill="${fill}" stroke="#3a1622" stroke-width="3"/><circle cx="0" cy="30" r="22" fill="#fff"/></svg><span>🐹</span>`;
 let jdF='all',jdSel=null,jdMap=null,jdMk={},jdLoaded=false;
 const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>((a.dates||[])[0]||'').localeCompare((b.dates||[])[0]||''));
 const jdDay=d=>{const x=new Date(d+'T00:00:00');return x.getDate()+' '+x.toLocaleString('en',{month:'short'})};
@@ -855,7 +858,7 @@ function jdList(){
   el.innerHTML=jdItems().filter(jdShow).map(p=>{
     const dir=p.maps||`https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`;
     return `<div class="jdcard${jdSel===p.id?' sel':''}" data-id="${p.id}" role="button" tabindex="0">
-      ${p.img?`<img class="jdimg" src="${esc(p.img)}" alt="${esc(p.name)} poster" loading="lazy">`:`<div class="jdimg">${HAM('#f48fb1')}</div>`}
+      ${p.img?`<img class="jdimg" src="${esc(p.img)}" alt="${esc(p.name)} poster" loading="lazy">`:`<div class="jdimg jdemo">🐹</div>`}
       <div class="jdc"><b>${esc(p.name)}</b><div class="jdm">${[p.owner,p.type].filter(Boolean).map(esc).join(' · ')}</div><div class="jdd">${esc(jdDates(p))}</div>${p.place?`<div class="jdm">📍 ${esc(p.place)}</div>`:''}${p.desc?`<p>${esc(p.desc)}</p>`:''}
       <div class="jdbtns"><a class="jdbtn p" href="${esc(dir)}" target="_blank" rel="noopener" data-gc="jinday-directions">Directions</a>${p.post?`<a class="jdbtn" href="${esc(p.post)}" target="_blank" rel="noopener" data-gc="jinday-post">See post</a>`:''}</div></div></div>`}).join('')||'<div class="jdfoot">no projects on this day yet ♡</div>';
   el.onclick=e=>{const a=e.target.closest('a[data-gc]');if(a){gc(a.dataset.gc);return}const c=e.target.closest('.jdcard');if(c)jdPick(c.dataset.id,true)};
@@ -885,7 +888,7 @@ async function jdInit(){
   const {Map}=await google.maps.importLibrary('maps');const {AdvancedMarkerElement}=await google.maps.importLibrary('marker');
   document.getElementById('jdmsg').style.display='none';
   jdMap=new Map(document.getElementById('jdmap'),{mapId:JDMAPID,center:{lat:13.7563,lng:100.5018},zoom:12,disableDefaultUI:true,zoomControl:true,clickableIcons:false});
-  jdItems().forEach(p=>{if(p.lat==null||p.lng==null)return;const d=document.createElement('div');d.className='jdpin';d.innerHTML=HAM('#f48fb1');
+  jdItems().forEach(p=>{if(p.lat==null||p.lng==null)return;const d=document.createElement('div');d.className='jdpin';d.innerHTML=PIN('#f48fb1');
     const m=new AdvancedMarkerElement({map:jdMap,position:{lat:+p.lat,lng:+p.lng},content:d,title:p.name,gmpClickable:true});
     m.addListener('click',()=>jdPick(p.id,false));jdMk[p.id]=m});
   jdPins(true);if(jdSel)jdPick(jdSel,false);
