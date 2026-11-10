@@ -377,9 +377,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 
 <div id="sheetRoot"><div class="scrim" id="scrim"></div><div class="sheet win" id="sheet"></div></div>
 
-<script src="data.js"></script>
-<script src="news.js"></script>
-<script src="jinday.js"></script>
+<script>(function(){var v=Math.floor(Date.now()/6e4);['data.js','news.js','jinday.js'].forEach(function(f){document.write('<script src="'+f+'?v='+v+'"><\/script>')})})();</script>
 <script>
 (function(){
 const T=window.TOUR||{legs:[],cities:[],surprise:{},mainset:[],albums:[]};
