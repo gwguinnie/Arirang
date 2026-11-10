@@ -96,6 +96,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .jdbtns{display:flex;gap:6px;flex-wrap:wrap}
 .jdbtn{border:1.5px solid var(--pk);border-radius:99px;padding:5px 12px;font:400 11.5px var(--mono);color:var(--pk2);background:#fff;text-decoration:none}
 .jdbtn.p{background:var(--pk);color:#fff}
+.jdst{display:inline-block;margin-bottom:4px;background:#fff3c4;color:#7a5a00;border:1px solid #e8c95a;border-radius:99px;padding:1px 8px;font:400 10.5px var(--mono)}
 .jdfoot{padding:10px 14px 16px;text-align:center;font:400 11px var(--mono);color:#8a5b6a}
 .jdpin{position:relative;width:40px;height:54px;transform-origin:50% 100%;transition:transform .15s;cursor:pointer}
 .jdpin svg{width:100%;height:100%;display:block}
@@ -837,15 +838,16 @@ const JD=window.JINDAY||{items:[]};const JDKEY='AIzaSyB-F5u0-kAuR8-zzLQ2fLawWByI
 const EMO="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif";
 const PIN=(fill)=>`<svg viewBox="-30 -2 60 96" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 C-34 0 -40 30 -28 50 L0 92 L28 50 C40 30 34 0 0 0Z" fill="${fill}" stroke="#3a1622" stroke-width="3"/><circle cx="0" cy="30" r="22" fill="#fff"/></svg><span>🐹</span>`;
 let jdF='all',jdSel=null,jdMap=null,jdMk={},jdLoaded=false;
-const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>((a.dates||[])[0]||'').localeCompare((b.dates||[])[0]||''));
+const jdLocs=p=>p.locs||(p.lat!=null&&p.lng!=null?[{lat:p.lat,lng:p.lng,maps:p.maps}]:[]);
+const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>((a.dates||[])[0]||'9').localeCompare((b.dates||[])[0]||'9'));
 const jdDay=d=>{const x=new Date(d+'T00:00:00');return x.getDate()+' '+x.toLocaleString('en',{month:'short'})};
-const jdDates=p=>{const d=p.dates||[];if(!d.length)return'';const t=d.length>2&&d.every((x,i)=>!i||(new Date(x)-new Date(d[i-1]))===864e5)?jdDay(d[0])+' – '+jdDay(d[d.length-1]):d.map(jdDay).join(' · ');return t+(p.time?' · '+p.time:'')};
+const jdDates=p=>{const d=p.dates||[];if(!d.length)return'Dates TBC · '+(p.time||'Time TBC');const t=d.length>2&&d.every((x,i)=>!i||(new Date(x)-new Date(d[i-1]))===864e5)?jdDay(d[0])+' – '+jdDay(d[d.length-1]):d.map(jdDay).join(' · ');return t+' · '+(p.time||'Time TBC')};
 const jdShow=p=>jdF==='all'||(p.dates||[]).includes(jdF);
 function renderJinDay(){
   const it=jdItems();if(!it.length)return;
   document.querySelector('nav.tabs a.jdtab').hidden=false;
   document.getElementById('jdsub').textContent=`birthday projects in Bangkok · ${it.length} project${it.length>1?'s':''}`;
-  const ds=[...new Set(it.flatMap(p=>p.dates||[]))].sort();
+  const ds=[...new Set(it.flatMap(p=>p.dates||[]))].filter(d=>d>='2026-12-01').sort();
   const ch=document.getElementById('jdchips');
   ch.innerHTML=`<button class="jdchip on" data-f="all">All</button>`+ds.map(d=>`<button class="jdchip" data-f="${d}">${jdDay(d)}${d.slice(5)==='12-04'?' 🎂':''}</button>`).join('');
   ch.onclick=e=>{const b=e.target.closest('.jdchip');if(!b)return;jdF=b.dataset.f;ch.querySelectorAll('.jdchip').forEach(x=>x.classList.toggle('on',x===b));jdList();jdPins(true)};
@@ -854,24 +856,25 @@ function renderJinDay(){
 function jdList(){
   const el=document.getElementById('jdlist');
   el.innerHTML=jdItems().filter(jdShow).map(p=>{
-    const dir=p.maps||`https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`;
+    const L=jdLocs(p);const dl=l=>esc(l.maps||`https://www.google.com/maps/dir/?api=1&destination=${l.lat},${l.lng}`);
+    const btns=L.length===1?`<a class="jdbtn p" href="${dl(L[0])}" target="_blank" rel="noopener" data-gc="jinday-directions">Directions</a>`:L.map(l=>`<a class="jdbtn p" href="${dl(l)}" target="_blank" rel="noopener" data-gc="jinday-directions">${esc(l.label)} ↗</a>`).join('');
     return `<div class="jdcard${jdSel===p.id?' sel':''}" data-id="${p.id}" role="button" tabindex="0">
       ${p.img?`<img class="jdimg" src="${esc(p.img)}" alt="${esc(p.name)} poster" loading="lazy">`:`<div class="jdimg jdemo">🐹</div>`}
-      <div class="jdc"><b>${esc(p.name)}</b><div class="jdm">${[p.owner,p.type].filter(Boolean).map(esc).join(' · ')}</div><div class="jdd">${esc(jdDates(p))}</div>${p.place?`<div class="jdm">📍 ${esc(p.place)}</div>`:''}${p.desc?`<p>${esc(p.desc)}</p>`:''}
-      <div class="jdbtns"><a class="jdbtn p" href="${esc(dir)}" target="_blank" rel="noopener" data-gc="jinday-directions">Directions</a>${p.post?`<a class="jdbtn" href="${esc(p.post)}" target="_blank" rel="noopener" data-gc="jinday-post">See post</a>`:''}</div></div></div>`}).join('')||'<div class="jdfoot">no projects on this day yet ♡</div>';
+      <div class="jdc">${p.status?`<span class="jdst">${esc(p.status)}</span>`:''}<b>${esc(p.name)}</b><div class="jdm">${[p.owner,p.type].filter(Boolean).map(esc).join(' · ')}</div><div class="jdd">${esc(jdDates(p))}</div><div class="jdm">📍 ${esc(p.place||'Location TBC')}</div>${p.desc?`<p>${esc(p.desc).replace(/\n/g,'<br>')}</p>`:''}
+      <div class="jdbtns">${btns}${p.post?`<a class="jdbtn" href="${esc(p.post)}" target="_blank" rel="noopener" data-gc="jinday-post">See post</a>`:''}</div></div></div>`}).join('')||'<div class="jdfoot">no projects on this day yet ♡</div>';
   el.onclick=e=>{const a=e.target.closest('a[data-gc]');if(a){gc(a.dataset.gc);return}const c=e.target.closest('.jdcard');if(c)jdPick(c.dataset.id,true)};
   el.onkeydown=e=>{if(e.key==='Enter'){const c=e.target.closest('.jdcard');if(c)jdPick(c.dataset.id,true)}};
 }
 function jdPick(id,fromCard){
   jdSel=id;document.querySelectorAll('.jdcard').forEach(c=>c.classList.toggle('sel',c.dataset.id===id));
-  Object.entries(jdMk).forEach(([k,m])=>{m.content.classList.toggle('sel',k===id);m.zIndex=k===id?999:1});
+  Object.entries(jdMk).forEach(([k,ms])=>ms.forEach(m=>{m.content.classList.toggle('sel',k===id);m.zIndex=k===id?999:1}));
   const p=jdItems().find(x=>x.id===id);
-  if(jdMap&&p&&fromCard){jdMap.panTo({lat:+p.lat,lng:+p.lng});if(jdMap.getZoom()<14)jdMap.setZoom(14);if(window.innerWidth<900)document.getElementById('jdmap').scrollIntoView({behavior:'smooth',block:'start'})}
+  const L=p?jdLocs(p):[];if(jdMap&&L.length&&fromCard){if(L.length>1){const b=new google.maps.LatLngBounds();L.forEach(l=>b.extend({lat:+l.lat,lng:+l.lng}));jdMap.fitBounds(b,60)}else{jdMap.panTo({lat:+L[0].lat,lng:+L[0].lng});if(jdMap.getZoom()<14)jdMap.setZoom(14)}if(window.innerWidth<900)document.getElementById('jdmap').scrollIntoView({behavior:'smooth',block:'start'})}
   if(!fromCard){const c=document.querySelector(`.jdcard[data-id="${id}"]`);if(c)c.scrollIntoView({behavior:'smooth',block:'nearest'})}
 }
 function jdPins(fit){
   if(!jdMap)return;const b=new google.maps.LatLngBounds();let n=0;
-  jdItems().forEach(p=>{const m=jdMk[p.id];if(!m)return;const on=jdShow(p);m.map=on?jdMap:null;if(on){b.extend({lat:+p.lat,lng:+p.lng});n++}});
+  jdItems().forEach(p=>{const ms=jdMk[p.id];if(!ms)return;const on=jdShow(p);ms.forEach(m=>{m.map=on?jdMap:null;if(on){b.extend(m.position);n++}})});
   if(fit&&n>1)jdMap.fitBounds(b,48);else if(fit&&n===1){jdMap.setCenter(b.getCenter());jdMap.setZoom(14)}
 }
 const jdMsg=t=>{const m=document.getElementById('jdmsg');if(m){m.textContent=t;m.style.display=''}};
@@ -886,9 +889,9 @@ async function jdInit(){
   const {Map}=await google.maps.importLibrary('maps');const {AdvancedMarkerElement}=await google.maps.importLibrary('marker');
   document.getElementById('jdmsg').style.display='none';
   jdMap=new Map(document.getElementById('jdmap'),{mapId:JDMAPID,center:{lat:13.7563,lng:100.5018},zoom:12,disableDefaultUI:true,zoomControl:true,clickableIcons:false});
-  jdItems().forEach(p=>{if(p.lat==null||p.lng==null)return;const d=document.createElement('div');d.className='jdpin';d.innerHTML=PIN('#f48fb1');
-    const m=new AdvancedMarkerElement({map:jdMap,position:{lat:+p.lat,lng:+p.lng},content:d,title:p.name,gmpClickable:true});
-    m.addListener('click',()=>jdPick(p.id,false));jdMk[p.id]=m});
+  jdItems().forEach(p=>{const L=jdLocs(p);if(!L.length)return;jdMk[p.id]=L.map(l=>{const d=document.createElement('div');d.className='jdpin';d.innerHTML=PIN('#f48fb1');
+    const m=new AdvancedMarkerElement({map:jdMap,position:{lat:+l.lat,lng:+l.lng},content:d,title:p.name+(l.label?' · '+l.label:''),gmpClickable:true});
+    m.addListener('click',()=>jdPick(p.id,false));return m})});
   jdPins(true);if(jdSel)jdPick(jdSel,false);
 }
 /* ---------- router ---------- */
