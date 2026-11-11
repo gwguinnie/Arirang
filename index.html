@@ -847,7 +847,7 @@ function renderJinDay(){
   const it=jdItems();if(!it.length)return;
   document.querySelector('nav.tabs a.jdtab').hidden=false;
   document.getElementById('jdsub').textContent=`birthday projects in Bangkok · ${it.length} project${it.length>1?'s':''}`;
-  const ds=[...new Set(it.flatMap(p=>p.dates||[]))].filter(d=>d>='2026-12-01').sort();
+  const ds=[...new Set(it.flatMap(p=>p.dates||[]))].filter(d=>d>='2026-12-03'&&d<='2026-12-06').sort();
   const ch=document.getElementById('jdchips');
   ch.innerHTML=`<button class="jdchip on" data-f="all">All</button>`+ds.map(d=>`<button class="jdchip" data-f="${d}">${jdDay(d)}${d.slice(5)==='12-04'?' 🎂':''}</button>`).join('');
   ch.onclick=e=>{const b=e.target.closest('.jdchip');if(!b)return;jdF=b.dataset.f;ch.querySelectorAll('.jdchip').forEach(x=>x.classList.toggle('on',x===b));jdList();jdPins(true)};

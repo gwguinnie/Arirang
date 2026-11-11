@@ -29,13 +29,13 @@ window.JINDAY={
 "2026-12-05",
 "2026-12-06"
 ],
-"place": "Around Rajamangala National Stadium",
+"place": "Ramkhamhaeng Night Market, near Rajamangala National Stadium",
 "desc": "5 trucks wrapped with Jin photos driving around the stadium. With JIN_FANTREE_JP + TEAM KimSeokjin_JP. Wrap design may change.",
-"lat": 13.7559599,
-"lng": 100.6227477,
+"lat": 13.7602826,
+"lng": 100.6237867,
 "post": "https://x.com/jin_fantree/status/2112198083106808154",
 "img": "jinday/jinfantree-trucks.jpg",
-"maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
 {
 "name": "JIN's Maple Story Vol.5 · Giant Outdoor Billboard",
@@ -122,13 +122,13 @@ window.JINDAY={
 "dates": [
 "2026-12-03"
 ],
-"place": "Rajamangala National Stadium",
+"place": "Ramkhamhaeng Night Market, near Rajamangala National Stadium",
 "desc": "A truck with a 3-sided Happy Jin Day banner, from Indonesia.",
-"lat": 13.7545599,
-"lng": 100.6219477,
+"lat": 13.759882600000001,
+"lng": 100.6239867,
 "post": "https://x.com/JinBase_/status/2117549114967859644",
 "img": "jinday/jinbase-vehicle.jpg",
-"maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
 {
 "name": "JIN's Love Quest · Cafe Event",
