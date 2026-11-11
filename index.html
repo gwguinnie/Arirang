@@ -245,9 +245,9 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .slipout img{width:100%;max-width:300px;display:block;margin:14px auto 6px;filter:drop-shadow(3px 4px 0 #0002)}
 /* sheet */
 .scrim{position:fixed;inset:0;background:#0007;opacity:0;pointer-events:none;transition:.2s;z-index:50}
-.sheet{position:fixed;left:12px;right:12px;bottom:12px;max-height:80vh;display:flex;flex-direction:column;transform:translateY(115%);transition:.25s ease;z-index:60}
+.sheet{position:fixed;left:12px;right:12px;bottom:12px;max-height:80vh;display:flex;flex-direction:column;transform:translateY(calc(100% + 60px));visibility:hidden;transition:transform .25s ease,visibility 0s .25s;z-index:60}
 .sheet .body{overflow:auto;padding:16px 16px 18px}
-.open .scrim{opacity:1;pointer-events:auto}.open .sheet{transform:none}
+.open .scrim{opacity:1;pointer-events:auto}.open .sheet{transform:none;visibility:visible;transition:transform .25s ease,visibility 0s}
 .sheet .bar .btns i.x{cursor:pointer;width:22px;height:22px;font-size:12px}
 .sheet h2{margin:0;font:700 34px/1 var(--cond);letter-spacing:.02em}
 .sheet .mt{font:400 11px var(--mono);color:var(--g);margin:6px 0 14px}
@@ -279,7 +279,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
   #v-news .win{max-width:780px;margin:0 auto}
   nav.tabs{max-width:760px}
   .sheet{left:50%;right:auto;width:560px;margin-left:-280px;bottom:auto;top:50%;transform:translateY(-46%) scale(.97);opacity:0;pointer-events:none;transition:.2s}
-  .open .sheet{transform:translateY(-50%);opacity:1;pointer-events:auto}
+  .open .sheet{transform:translateY(-50%);opacity:1;pointer-events:auto;visibility:visible}
 }
 </style>
 <script data-goatcounter="https://gwguinnie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
