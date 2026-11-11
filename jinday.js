@@ -22,7 +22,7 @@ window.JINDAY={
 },
 {
 "name": "5 JIN Wrapping Trucks",
-"owner": "@jin_fantree",
+"owner": "@jin_fantree × @jin_fantree_jp × Team Kimseokjin_JP",
 "type": "wrapping trucks",
 "dates": [
 "2026-12-03",
@@ -30,7 +30,7 @@ window.JINDAY={
 "2026-12-06"
 ],
 "place": "Ramkhamhaeng Night Market, near Rajamangala National Stadium",
-"desc": "5 trucks wrapped with Jin photos driving around the stadium. With JIN_FANTREE_JP + TEAM KimSeokjin_JP. Wrap design may change.",
+"desc": "5 trucks wrapped with Jin photos driving around the stadium.",
 "lat": 13.7602826,
 "lng": 100.6237867,
 "post": "https://x.com/jin_fantree/status/2112198083106808154",
@@ -38,7 +38,7 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
 {
-"name": "JIN's Maple Story Vol.5 · Giant Outdoor Billboard",
+"name": "JIN's Maple Story · Giant Outdoor Billboard",
 "owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
 "type": "billboard",
 "dates": [
@@ -59,7 +59,7 @@ window.JINDAY={
 "2026-12-07"
 ],
 "place": "Ramkhamhaeng Road at SAT Market, near Rajamangala National Stadium",
-"desc": "A massive 30m × 12.5m outdoor billboard. Preview only — the real artwork will be revealed later.",
+"desc": "A massive 30m × 12.5m outdoor billboard.",
 "lat": 13.7600851,
 "lng": 100.6242694,
 "post": "https://x.com/ChinaJinBar/status/2116154267988033683",
@@ -67,7 +67,7 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/mx17YTvqYaAruWcb7"
 },
 {
-"name": "Digital Poster Ads · BTS Skytrain stations",
+"name": "Jin Lights Up Bangkok",
 "owner": "@jin_fantree × Team Kimseokjin",
 "type": "e-posters",
 "dates": [
@@ -80,7 +80,7 @@ window.JINDAY={
 "2026-12-07"
 ],
 "place": "BTS Siam · Asok · National Stadium",
-"desc": "\"Jin Lights Up Bangkok\" digital posters at 3 BTS stations. Ad image will be revealed later.",
+"desc": "Digital posters displayed at 3 BTS Skytrain stations.",
 "locs": [
 {
 "label": "Siam",

@@ -841,7 +841,7 @@ let jdF='all',jdSel=null,jdMap=null,jdMk={},jdLoaded=false;
 const jdLocs=p=>p.locs||(p.lat!=null&&p.lng!=null?[{lat:p.lat,lng:p.lng,maps:p.maps}]:[]);
 const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>((a.dates||[])[0]||'9').localeCompare((b.dates||[])[0]||'9'));
 const jdDay=d=>{const x=new Date(d+'T00:00:00');return x.getDate()+' '+x.toLocaleString('en',{month:'short'})};
-const jdDates=p=>{const d=p.dates||[];if(!d.length)return'Dates TBC · '+(p.time||'Time TBC');const t=d.length>2&&d.every((x,i)=>!i||(new Date(x)-new Date(d[i-1]))===864e5)?jdDay(d[0])+' – '+jdDay(d[d.length-1]):d.map(jdDay).join(' · ');return t+' · '+(p.time||'Time TBC')};
+const jdDates=p=>{const d=p.dates||[];if(!d.length)return'Dates TBC'+(p.time?' · '+p.time:'');const t=d.length>2&&d.every((x,i)=>!i||(new Date(x)-new Date(d[i-1]))===864e5)?jdDay(d[0])+' – '+jdDay(d[d.length-1]):d.map(jdDay).join(' · ');return t+(p.time?' · '+p.time:'')};
 const jdShow=p=>jdF==='all'||(p.dates||[]).includes(jdF);
 function renderJinDay(){
   const it=jdItems();if(!it.length)return;
