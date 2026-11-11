@@ -169,7 +169,7 @@ window.JINDAY={
 },
 {
 "name": "One Jin, A Million Hearts · Tuk-Tuk Event",
-"owner": "@jinniesarchives",
+"owner": "@_PSJkim92",
 "type": "tuk-tuks",
 "dates": [
 "2026-12-02",
@@ -185,7 +185,7 @@ window.JINDAY={
 "desc": "12 Jin tuk-tuks for the 12th month — Jin's birthday month. They keep driving around Siam and go wherever riders ask.",
 "lat": 13.7449,
 "lng": 100.5336,
-"post": "https://x.com/jinniesarchives/status/2116836261289971737",
+"post": "https://x.com/_psjkim92/status/2116734492429934966",
 "img": "jinday/jinniesarchives-tuktuk.jpg"
 },
 {
