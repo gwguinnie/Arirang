@@ -1,6 +1,6 @@
 # BTS news log
 
-## 2026-11-11 (เที่ยงคืน)
+## 2026-11-11 (เที่ยง)
 - Apple Music names BTS "SWIM" a global 2026 Best Song, first K-pop group (StarNews) https://starnewskorea.com/en/music/2026/11/11/2026111107063376958
 
 ## 2026-11-10 (เที่ยง)
