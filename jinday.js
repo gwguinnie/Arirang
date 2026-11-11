@@ -141,8 +141,8 @@ window.JINDAY={
 "time": "09:30–17:00",
 "place": "Be Still Cafe, Ramkhamhaeng 24 Yaek 20 (behind Rajamangala)",
 "desc": "Gifts for all visitors: 1 mini uchiwa, 2 postcards, 4 photocards.\nFirst come, first served: mini photobook / slogan / uchiwa.",
-"lat": 13.7497,
-"lng": 100.6193,
+"lat": 13.7520873,
+"lng": 100.6226497,
 "maps": "https://maps.app.goo.gl/UoxpHx4MYJxBsJCP8",
 "post": "https://x.com/ALittleBraver92/status/2115023708691530229",
 "img": "jinday/alittlebraver92-lovequest.jpg"
@@ -159,8 +159,8 @@ window.JINDAY={
 ],
 "place": "BREVE Café, Ramkhamhaeng 24 Soi 20",
 "desc": "2026 Happy Jin Day Project by KONI — Bangkok cafe. More support coming soon.",
-"lat": 13.7503,
-"lng": 100.6187,
+"lat": 13.7514,
+"lng": 100.6219,
 "maps": "https://maps.app.goo.gl/kAyfvDy5BxiPaCR26",
 "post": "https://x.com/btsforever1207/status/2119755794044567772",
 "img": "jinday/koni-jinday-cafe.jpg"
@@ -192,8 +192,8 @@ window.JINDAY={
 "type": "LED screens",
 "place": "Union Mall, Lat Phrao",
 "desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
-"lat": 13.8133,
-"lng": 100.5611,
+"lat": 13.813587,
+"lng": 100.561841,
 "maps": "https://maps.app.goo.gl/727gtWpk3gqaWoeb8",
 "post": "https://x.com/jin_fantree/status/2118896205895963081"
 },
