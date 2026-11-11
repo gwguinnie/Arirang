@@ -143,7 +143,7 @@ window.JINDAY={
 "desc": "Gifts for all visitors: 1 mini uchiwa, 2 postcards, 4 photocards.\nFirst come, first served: mini photobook / slogan / uchiwa.",
 "lat": 13.7520873,
 "lng": 100.6226497,
-"maps": "https://maps.app.goo.gl/UoxpHx4MYJxBsJCP8",
+"maps": "https://maps.app.goo.gl/3YB2rtcWdXHdCLMK6",
 "post": "https://x.com/ALittleBraver92/status/2115023708691530229",
 "img": "jinday/alittlebraver92-lovequest.jpg"
 },
