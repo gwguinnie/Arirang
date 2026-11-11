@@ -14,11 +14,11 @@ window.JINDAY={
 "time": "06:00–24:00",
 "place": "MBK Center mega LED screen, Pathum Wan",
 "desc": "Birthday ad on the big MBK screen facing Pathumwan intersection — 108 plays.",
-"lat": 13.74466,
-"lng": 100.52996,
+"lat": 13.7447542,
+"lng": 100.529956,
 "post": "https://x.com/seokjin_1204Hz/status/2114768148725665922",
 "img": "jinday/1204hz-mbk-led.jpg",
-"maps": "https://maps.app.goo.gl/shKDmRJT2EMu7NY2A"
+"maps": "https://maps.app.goo.gl/81BoCUdFvZrt3WNs7"
 },
 {
 "name": "5 JIN Wrapping Trucks",
@@ -31,10 +31,11 @@ window.JINDAY={
 ],
 "place": "Around Rajamangala National Stadium",
 "desc": "5 trucks wrapped with Jin photos driving around the stadium. With JIN_FANTREE_JP + TEAM KimSeokjin_JP. Wrap design may change.",
-"lat": 13.7562,
-"lng": 100.6236,
+"lat": 13.7559599,
+"lng": 100.6227477,
 "post": "https://x.com/jin_fantree/status/2112198083106808154",
-"img": "jinday/jinfantree-trucks.jpg"
+"img": "jinday/jinfantree-trucks.jpg",
+"maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
 },
 {
 "name": "JIN's Maple Story Vol.5 · Giant Outdoor Billboard",
@@ -123,10 +124,11 @@ window.JINDAY={
 ],
 "place": "Rajamangala National Stadium",
 "desc": "A truck with a 3-sided Happy Jin Day banner, from Indonesia.",
-"lat": 13.7546,
-"lng": 100.6209,
+"lat": 13.7545599,
+"lng": 100.6219477,
 "post": "https://x.com/JinBase_/status/2117549114967859644",
-"img": "jinday/jinbase-vehicle.jpg"
+"img": "jinday/jinbase-vehicle.jpg",
+"maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
 },
 {
 "name": "JIN's Love Quest · Cafe Event",
@@ -159,9 +161,9 @@ window.JINDAY={
 ],
 "place": "BREVE Café, Ramkhamhaeng 24 Soi 20",
 "desc": "2026 Happy Jin Day Project by KONI — Bangkok cafe. More support coming soon.",
-"lat": 13.7514,
-"lng": 100.6219,
-"maps": "https://maps.app.goo.gl/kAyfvDy5BxiPaCR26",
+"lat": 13.7532428,
+"lng": 100.6222119,
+"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
 "post": "https://x.com/btsforever1207/status/2119755794044567772",
 "img": "jinday/koni-jinday-cafe.jpg"
 },
@@ -192,9 +194,9 @@ window.JINDAY={
 "type": "LED screens",
 "place": "Union Mall, Lat Phrao",
 "desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
-"lat": 13.813587,
-"lng": 100.561841,
-"maps": "https://maps.app.goo.gl/727gtWpk3gqaWoeb8",
+"lat": 13.8133637,
+"lng": 100.5618612,
+"maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8",
 "post": "https://x.com/jin_fantree/status/2118896205895963081"
 },
 {
@@ -227,10 +229,11 @@ window.JINDAY={
 "time": "during the concert",
 "place": "Inside Rajamangala National Stadium",
 "desc": "Plan A — when the HBD light shows (surprise songs): pink flashlight on, slogan up, sing Happy Birthday (Eng).\nPlan B — no surprise: in the ending ment, when Jin blows kisses, sing Happy Birthday (Eng) and hold the slogan up until his ment ends.\n5 Dec happens in a different segment from 3 Dec.\nFlashlight sticker: 3 Dec light pink · 5 Dec dark pink.\n#JinbdwithThaiArmy",
-"lat": 13.7553,
-"lng": 100.6223,
+"lat": 13.7552599,
+"lng": 100.6223477,
 "post": "https://x.com/seokjin_th/status/2120144854386954333",
-"img": "jinday/seokjinth-concert.jpg"
+"img": "jinday/seokjinth-concert.jpg",
+"maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
 }
 ]
 };
