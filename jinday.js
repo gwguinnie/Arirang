@@ -17,7 +17,8 @@ window.JINDAY={
 "lat": 13.74466,
 "lng": 100.52996,
 "post": "https://x.com/seokjin_1204Hz/status/2114768148725665922",
-"img": "jinday/1204hz-mbk-led.jpg"
+"img": "jinday/1204hz-mbk-led.jpg",
+"maps": "https://maps.app.goo.gl/shKDmRJT2EMu7NY2A"
 },
 {
 "name": "5 JIN Wrapping Trucks",
@@ -56,12 +57,13 @@ window.JINDAY={
 "2026-12-06",
 "2026-12-07"
 ],
-"place": "Ramkhamhaeng Road, near Rajamangala National Stadium",
+"place": "Ramkhamhaeng Road at SAT Market, near Rajamangala National Stadium",
 "desc": "A massive 30m × 12.5m outdoor billboard. Preview only — the real artwork will be revealed later.",
-"lat": 13.7578,
-"lng": 100.62,
+"lat": 13.7600851,
+"lng": 100.6242694,
 "post": "https://x.com/ChinaJinBar/status/2116154267988033683",
-"img": "jinday/jinfantree-maplestory5.jpg"
+"img": "jinday/jinfantree-maplestory5.jpg",
+"maps": "https://maps.app.goo.gl/mx17YTvqYaAruWcb7"
 },
 {
 "name": "Digital Poster Ads · BTS Skytrain stations",
@@ -141,7 +143,7 @@ window.JINDAY={
 "desc": "Gifts for all visitors: 1 mini uchiwa, 2 postcards, 4 photocards.\nFirst come, first served: mini photobook / slogan / uchiwa.",
 "lat": 13.7497,
 "lng": 100.6193,
-"maps": "https://www.google.com/maps/search/?api=1&query=Be+Still+cafe+Ramkhamhaeng+24",
+"maps": "https://maps.app.goo.gl/UoxpHx4MYJxBsJCP8",
 "post": "https://x.com/ALittleBraver92/status/2115023708691530229",
 "img": "jinday/alittlebraver92-lovequest.jpg"
 },
@@ -159,7 +161,7 @@ window.JINDAY={
 "desc": "2026 Happy Jin Day Project by KONI — Bangkok cafe. More support coming soon.",
 "lat": 13.7503,
 "lng": 100.6187,
-"maps": "https://www.google.com/maps/search/?api=1&query=BREVE+Cafe+Ramkhamhaeng+24",
+"maps": "https://maps.app.goo.gl/kAyfvDy5BxiPaCR26",
 "post": "https://x.com/btsforever1207/status/2119755794044567772",
 "img": "jinday/koni-jinday-cafe.jpg"
 },
@@ -192,7 +194,7 @@ window.JINDAY={
 "desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
 "lat": 13.8133,
 "lng": 100.5611,
-"maps": "https://www.google.com/maps/search/?api=1&query=Union+Mall+Lat+Phrao",
+"maps": "https://maps.app.goo.gl/727gtWpk3gqaWoeb8",
 "post": "https://x.com/jin_fantree/status/2118896205895963081"
 },
 {
