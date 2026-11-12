@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-11",
+"updated": "2026-11-12",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -150,8 +150,8 @@ window.JINDAY={
 "img": "jinday/alittlebraver92-lovequest.jpg"
 },
 {
-"name": "Happy JIN Day Cafe Event (KONI)",
-"owner": "@btsforever1207",
+"name": "2026 Happy Jin Day Project KONI in Bangkok · Jin Birthday Cafe 🤠",
+"owner": "@btsforever1207 (KONI) × @jin_fantree",
 "type": "cafe event",
 "dates": [
 "2026-12-03",
@@ -160,11 +160,11 @@ window.JINDAY={
 "2026-12-06"
 ],
 "place": "BREVE Café, Ramkhamhaeng 24 Soi 20",
-"desc": "2026 Happy Jin Day Project by KONI — Bangkok cafe. More support coming soon.",
+"desc": "✦ Special gift (jin_fantree): acrylic foldable prop ×1\n✦ Basic gifts (KONI): coffee cup sleeve ×1 · postcard ×2 · photocard ×3 · sticker ×1\n✦ On-site: cafe deco & goods (KONI) 3–6 Dec · lucky draw (jin_fantree) 3–5 Dec",
 "lat": 13.7532428,
 "lng": 100.6222119,
 "maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
-"post": "https://x.com/btsforever1207/status/2119755794044567772",
+"post": "https://x.com/btsforever1207/status/2120844817920045464",
 "img": "jinday/koni-jinday-cafe.jpg"
 },
 {
