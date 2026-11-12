@@ -203,7 +203,7 @@ window.JINDAY={
 "lng": 100.6219119,
 "maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
 "post": "https://x.com/_psjkim92/status/2116734492429934966",
-"img": "jinday/jinniesarchives-tuktuk.jpg"
+"img": "jinday/psjkim92-tuktuk-breve.jpg"
 },
 {
 "name": "UNION MALL LED Ads",
