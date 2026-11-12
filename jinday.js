@@ -64,7 +64,7 @@ window.JINDAY={
 "lng": 100.6242694,
 "post": "https://x.com/ChinaJinBar/status/2116154267988033683",
 "img": "jinday/jinfantree-maplestory5.jpg",
-"maps": "https://maps.app.goo.gl/mx17YTvqYaAruWcb7"
+"maps": "https://maps.app.goo.gl/LYYGGUFocZabYcKW9"
 },
 {
 "name": "Jin Lights Up Bangkok",
