@@ -168,7 +168,7 @@ window.JINDAY={
 "img": "jinday/koni-jinday-cafe.jpg"
 },
 {
-"name": "One Jin, A Million Hearts · Tuk-Tuk Event",
+"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (SIAM)",
 "owner": "@_PSJkim92",
 "type": "tuk-tuks",
 "dates": [
@@ -185,6 +185,23 @@ window.JINDAY={
 "desc": "12 Jin tuk-tuks for the 12th month — Jin's birthday month. They keep driving around Siam and go wherever riders ask.",
 "lat": 13.7449,
 "lng": 100.5336,
+"post": "https://x.com/_psjkim92/status/2116734492429934966",
+"img": "jinday/jinniesarchives-tuktuk.jpg"
+},
+{
+"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (BREVE Cafe)",
+"owner": "@_PSJkim92",
+"type": "tuk-tuk",
+"dates": [
+"2026-12-03",
+"2026-12-04"
+],
+"time": "11:00–15:00",
+"place": "In front of BREVE Café, Ramkhamhaeng 24 Soi 20",
+"desc": "Take photos with the Jin birthday tuk-tuk in front of BREVE Café.\n⏰ 11:00–12:00 · tuk-tuk parked in front of the cafe for photos\n⏰ 12:00–15:00 · free tuk-tuk rides from the cafe to around Rajamangala National Stadium / MRT Mahat Thai\n♡ 1 tuk-tuk per day ♡ rides depend on the number of trips and the queue",
+"lat": 13.7534428,
+"lng": 100.6219119,
+"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
 "post": "https://x.com/_psjkim92/status/2116734492429934966",
 "img": "jinday/jinniesarchives-tuktuk.jpg"
 },
