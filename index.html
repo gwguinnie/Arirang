@@ -844,7 +844,7 @@ const EMO="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif";
 const PIN=(fill)=>`<svg viewBox="-30 -2 60 96" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 C-34 0 -40 30 -28 50 L0 92 L28 50 C40 30 34 0 0 0Z" fill="${fill}" stroke="#3a1622" stroke-width="3"/><circle cx="0" cy="30" r="22" fill="#fff"/></svg><span>🐹</span>`;
 let jdF='all',jdSel=null,jdMap=null,jdMk={},jdLoaded=false;
 const jdLocs=p=>p.locs||(p.lat!=null&&p.lng!=null?[{lat:p.lat,lng:p.lng,maps:p.maps}]:[]);
-const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>((a.dates||[])[0]||'9').localeCompare((b.dates||[])[0]||'9'));
+const jdItems=()=>(JD.items||[]).map((p,i)=>Object.assign({id:'p'+i},p)).sort((a,b)=>(a.sortDate||(a.dates||[])[0]||'9').localeCompare(b.sortDate||(b.dates||[])[0]||'9'));
 const jdDay=d=>{const x=new Date(d+'T00:00:00');return x.getDate()+' '+x.toLocaleString('en',{month:'short'})};
 const jdDates=p=>{const d=p.dates||[];if(!d.length)return'Dates TBC'+(p.time?' · '+p.time:'');const t=d.length>2&&d.every((x,i)=>!i||(new Date(x)-new Date(d[i-1]))===864e5)?jdDay(d[0])+' – '+jdDay(d[d.length-1]):d.map(jdDay).join(' · ');return t+(p.time?' · '+p.time:'')};
 const jdShow=p=>jdF==='all'||(p.dates||[]).includes(jdF);
