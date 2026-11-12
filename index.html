@@ -80,6 +80,10 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .jdsub{font:400 12px var(--mono);color:#8a5b6a}
 .jdgrid{display:block}
 #jdmap{position:relative;height:300px;background:#f6eef1;border-top:2px solid var(--pkb);border-bottom:2px solid var(--pkb)}
+.jdgate{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:#ffeef4 radial-gradient(#f6bdd0 1.3px,transparent 1.3px) 0 0/11px 11px;padding:16px;text-align:center}
+.jdhams{font:34px/1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;letter-spacing:6px}
+.jdshow{font-size:14px;padding:9px 20px;cursor:pointer}
+.jdnote{font:400 11.5px/1.5 var(--mono);color:#8a5b6a}
 .jdmsg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;font:400 12px/1.6 var(--mono);color:#8a5b6a}
 .jdchips{display:flex;gap:6px;flex-wrap:wrap;padding:12px 14px 4px}
 .jdchip{border:1.5px solid var(--pk);color:var(--pk2);background:#fff;border-radius:99px;padding:5px 12px;font:400 12px var(--mono);cursor:pointer}
@@ -367,7 +371,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
     <div class="jdwin">
       <div class="jdhead"><span class="jdtape">HAPPY JIN DAY · 4 DEC</span><h2>JIN DAY 🎂</h2><div class="jdsub" id="jdsub"></div></div>
       <div class="jdgrid">
-        <div id="jdmap"><div class="jdmsg" id="jdmsg">loading map…</div></div>
+        <div id="jdmap"><div class="jdgate" id="jdgate"><div class="jdhams">🐹🐹🐹</div><button class="jdbtn p jdshow" id="jdshow">🐹 Show map</button><div class="jdnote">tap to see every project on Google Maps</div></div><div class="jdmsg" id="jdmsg" style="display:none">loading map…</div></div>
         <div><div class="jdchips" id="jdchips"></div><div class="jdlist" id="jdlist"></div>
         <div class="jdfoot">fan-made ♡ info from each project owner — check their post before you go</div></div>
       </div>
@@ -707,6 +711,7 @@ async function drawTicket(){gc('make-ticket');
   if(window.innerWidth<900)document.getElementById('tkout').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
+function gcLater(p,n){n=n||0;if(window.goatcounter&&window.goatcounter.count)gc(p);else if(n<40)setTimeout(()=>gcLater(p,n+1),250)}
 function gc(p){try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:p,title:p,event:true})}catch(e){}}
 let _dl;function getDL(){if(_dl===undefined)_dl=(window.claude&&window.claude.use?window.claude.use('downloads'):Promise.resolve(null)).catch(()=>null);return _dl}
 function wireSave(cv,fname,btnId,msgId,label){
@@ -899,9 +904,10 @@ const VIEWS_OK=['tour','songs','news','ticket','random','jinday'];
 function route(){const h=location.hash.slice(1);const v=VIEWS_OK.includes(h)&&!(h==='jinday'&&!jdItems().length)?h:'tour';
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
   document.querySelectorAll('nav.tabs a').forEach(x=>x.classList.toggle('on',x.dataset.v===v));
-  if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);if(v==='jinday')jdLoad();}
+  if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);}
 window.addEventListener('hashchange',()=>{route();gc('tab-'+(VIEWS_OK.includes(location.hash.slice(1))?location.hash.slice(1):'tour'))});
-renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();renderJinDay();route();renderMap();
+renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();renderJinDay();route();{const h=location.hash.slice(1);if(h&&h!=='tour'&&VIEWS_OK.includes(h))gcLater('tab-'+h)}
+  {const b=document.getElementById('jdshow');if(b)b.onclick=()=>{document.getElementById('jdgate').style.display='none';const m=document.getElementById('jdmsg');m.style.display='';gc('jinday-show-map');jdLoad()}}renderMap();
 })();
 
 </script>
