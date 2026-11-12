@@ -102,6 +102,84 @@ window.JINDAY={
 "img": "jinday/jinfantree-eposters.jpg"
 },
 {
+"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (SIAM)",
+"owner": "@_PSJkim92",
+"type": "tuk-tuks",
+"dates": [
+"2026-12-02",
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06",
+"2026-12-07",
+"2026-12-08"
+],
+"time": "10:00–20:00",
+"place": "Around Siam (also Sala Daeng, Sukhumvit)",
+"desc": "12 Jin tuk-tuks for the 12th month — Jin's birthday month. They keep driving around Siam and go wherever riders ask.",
+"lat": 13.7449,
+"lng": 100.5336,
+"post": "https://x.com/_psjkim92/status/2116734492429934966",
+"img": "jinday/jinniesarchives-tuktuk.jpg"
+},
+{
+"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (BREVE Cafe)",
+"owner": "@_PSJkim92",
+"type": "tuk-tuk",
+"dates": [
+"2026-12-03",
+"2026-12-04"
+],
+"time": "11:00–15:00",
+"place": "In front of BREVE Café, Ramkhamhaeng 24 Soi 20",
+"desc": "Take photos with the Jin birthday tuk-tuk in front of BREVE Café.\n⏰ 11:00–12:00 · tuk-tuk parked in front of the cafe for photos\n⏰ 12:00–15:00 · free tuk-tuk rides from the cafe to around Rajamangala National Stadium / MRT Mahat Thai\n♡ 1 tuk-tuk per day ♡ rides depend on the number of trips and the queue",
+"lat": 13.7534428,
+"lng": 100.6219119,
+"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
+"post": "https://x.com/_psjkim92/status/2116734492429934966",
+"img": "jinday/psjkim92-tuktuk-breve.jpg",
+"sortDate": "2026-12-02"
+},
+{
+"name": "2026 Happy Jin Day Project KONI in Bangkok · Jin Birthday Cafe 🤠",
+"owner": "@btsforever1207 (KONI) × @jin_fantree",
+"type": "cafe event",
+"dates": [
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06"
+],
+"place": "BREVE Café, Ramkhamhaeng 24 Soi 20",
+"desc": "✦ Special gift (jin_fantree): acrylic foldable prop ×1\n✦ Basic gifts (KONI): coffee cup sleeve ×1 · postcard ×2 · photocard ×3 · sticker ×1\n✦ On-site: cafe deco & goods (KONI) 3–6 Dec · lucky draw (jin_fantree) 3–5 Dec",
+"lat": 13.7532428,
+"lng": 100.6222119,
+"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
+"post": "https://x.com/btsforever1207/status/2120844817920045464",
+"img": "jinday/koni-jinday-cafe.jpg",
+"sortDate": "2026-12-02"
+},
+{
+"name": "JIN's Love Quest · Cafe Event",
+"owner": "@ALittleBraver92",
+"type": "cafe · photo exhibition",
+"dates": [
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06"
+],
+"time": "09:30–17:00",
+"place": "Be Still Cafe, Ramkhamhaeng 24 Yaek 20 (behind Rajamangala)",
+"desc": "Gifts for all visitors: 1 mini uchiwa, 2 postcards, 4 photocards.\nFirst come, first served: mini photobook / slogan / uchiwa.",
+"lat": 13.7520873,
+"lng": 100.6226497,
+"maps": "https://maps.app.goo.gl/3YB2rtcWdXHdCLMK6",
+"post": "https://x.com/ALittleBraver92/status/2115023708691530229",
+"img": "jinday/alittlebraver92-lovequest.jpg",
+"sortDate": "2026-12-02"
+},
+{
 "name": "ONLY JIN Cafe Event",
 "owner": "@jin_fantree",
 "type": "cafe event",
@@ -129,82 +207,6 @@ window.JINDAY={
 "post": "https://x.com/JinBase_/status/2117549114967859644",
 "img": "jinday/jinbase-vehicle.jpg",
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
-},
-{
-"name": "JIN's Love Quest · Cafe Event",
-"owner": "@ALittleBraver92",
-"type": "cafe · photo exhibition",
-"dates": [
-"2026-12-03",
-"2026-12-04",
-"2026-12-05",
-"2026-12-06"
-],
-"time": "09:30–17:00",
-"place": "Be Still Cafe, Ramkhamhaeng 24 Yaek 20 (behind Rajamangala)",
-"desc": "Gifts for all visitors: 1 mini uchiwa, 2 postcards, 4 photocards.\nFirst come, first served: mini photobook / slogan / uchiwa.",
-"lat": 13.7520873,
-"lng": 100.6226497,
-"maps": "https://maps.app.goo.gl/3YB2rtcWdXHdCLMK6",
-"post": "https://x.com/ALittleBraver92/status/2115023708691530229",
-"img": "jinday/alittlebraver92-lovequest.jpg"
-},
-{
-"name": "2026 Happy Jin Day Project KONI in Bangkok · Jin Birthday Cafe 🤠",
-"owner": "@btsforever1207 (KONI) × @jin_fantree",
-"type": "cafe event",
-"dates": [
-"2026-12-03",
-"2026-12-04",
-"2026-12-05",
-"2026-12-06"
-],
-"place": "BREVE Café, Ramkhamhaeng 24 Soi 20",
-"desc": "✦ Special gift (jin_fantree): acrylic foldable prop ×1\n✦ Basic gifts (KONI): coffee cup sleeve ×1 · postcard ×2 · photocard ×3 · sticker ×1\n✦ On-site: cafe deco & goods (KONI) 3–6 Dec · lucky draw (jin_fantree) 3–5 Dec",
-"lat": 13.7532428,
-"lng": 100.6222119,
-"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
-"post": "https://x.com/btsforever1207/status/2120844817920045464",
-"img": "jinday/koni-jinday-cafe.jpg"
-},
-{
-"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (BREVE Cafe)",
-"owner": "@_PSJkim92",
-"type": "tuk-tuk",
-"dates": [
-"2026-12-03",
-"2026-12-04"
-],
-"time": "11:00–15:00",
-"place": "In front of BREVE Café, Ramkhamhaeng 24 Soi 20",
-"desc": "Take photos with the Jin birthday tuk-tuk in front of BREVE Café.\n⏰ 11:00–12:00 · tuk-tuk parked in front of the cafe for photos\n⏰ 12:00–15:00 · free tuk-tuk rides from the cafe to around Rajamangala National Stadium / MRT Mahat Thai\n♡ 1 tuk-tuk per day ♡ rides depend on the number of trips and the queue",
-"lat": 13.7534428,
-"lng": 100.6219119,
-"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
-"post": "https://x.com/_psjkim92/status/2116734492429934966",
-"img": "jinday/psjkim92-tuktuk-breve.jpg",
-"sortDate": "2026-12-02"
-},
-{
-"name": "🛺💗 HAPPY JIN'S DAY PROJECT – TUK-TUK SERVICE (SIAM)",
-"owner": "@_PSJkim92",
-"type": "tuk-tuks",
-"dates": [
-"2026-12-02",
-"2026-12-03",
-"2026-12-04",
-"2026-12-05",
-"2026-12-06",
-"2026-12-07",
-"2026-12-08"
-],
-"time": "10:00–20:00",
-"place": "Around Siam (also Sala Daeng, Sukhumvit)",
-"desc": "12 Jin tuk-tuks for the 12th month — Jin's birthday month. They keep driving around Siam and go wherever riders ask.",
-"lat": 13.7449,
-"lng": 100.5336,
-"post": "https://x.com/_psjkim92/status/2116734492429934966",
-"img": "jinday/jinniesarchives-tuktuk.jpg"
 },
 {
 "name": "UNION MALL LED Ads",
