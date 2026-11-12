@@ -58,13 +58,13 @@ window.JINDAY={
 "2026-12-06",
 "2026-12-07"
 ],
-"place": "Ramkhamhaeng Road at SAT Market, near Rajamangala National Stadium",
+"place": "Ramkhamhaeng Night Market, near Rajamangala National Stadium",
 "desc": "A massive 30m × 12.5m outdoor billboard.",
-"lat": 13.7600851,
-"lng": 100.6242694,
+"lat": 13.7600826,
+"lng": 100.6232867,
 "post": "https://x.com/ChinaJinBar/status/2116154267988033683",
 "img": "jinday/jinfantree-maplestory5.jpg",
-"maps": "https://maps.app.goo.gl/LYYGGUFocZabYcKW9"
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
 {
 "name": "Jin Lights Up Bangkok",
