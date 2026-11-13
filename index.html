@@ -96,6 +96,12 @@ nav.tabs a.thtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.thtab.on{backgrou
 #thsSubmit{width:100%;margin-top:14px;background:#ee1d3e;color:#fff;border:2px solid #111;border-radius:10px;padding:11px;font:700 22px var(--cond);letter-spacing:.06em;box-shadow:4px 4px 0 #111;cursor:pointer}
 #thsFErr{color:#d4002a;font:400 12px var(--mono);margin-top:8px;min-height:1px}
 .thsfine{font:400 10.5px/1.5 var(--mono);color:#666;margin-top:10px}
+#thsGate{position:fixed;inset:0;background:rgba(17,17,17,.55);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
+#thsGate .card{width:min(360px,100%);margin:0;box-shadow:6px 6px 0 #ee1d3e}#thsGate .bar a{color:#fff;text-decoration:none;font-size:16px;padding:0 4px}
+#thsGate .pad{padding:20px 18px 18px;text-align:center}#thsGate .lk{font-size:36px;line-height:1;margin-bottom:8px}#thsGate .tag2{display:inline-block;background:#ee1d3e;color:#fff;font:400 11px var(--mono);letter-spacing:.08em;padding:3px 8px;border-radius:4px;margin-bottom:10px}
+#thsGate h3 span{display:block;white-space:nowrap}#thsGate h3{font:700 23px/1.35 'Sukhumvit Set','Thonburi','Noto Sans Thai','Leelawadee UI',var(--sans);margin:0 0 16px}
+#thsGate .hint{font:400 13px/1.5 'Sukhumvit Set','Thonburi','Noto Sans Thai',var(--mono);color:#555;background:#f6f1ea;border:1.5px dashed #bbb;border-radius:8px;padding:6px 10px;margin:-6px 0 14px}#thsGate form{display:flex;gap:8px}#thsGate input{flex:1;min-width:0;border:2.5px solid #111;border-radius:10px;padding:11px 12px;font:400 16px var(--sans)}#thsGate button{border:2.5px solid #111;border-radius:10px;background:#ee1d3e;color:#fff;font:700 18px var(--cond);padding:0 16px;box-shadow:3px 3px 0 #111;cursor:pointer}
+#thsGErr{color:#c8102e;font:400 12.5px var(--mono);min-height:18px;margin-top:8px}.ths.locked>*:not(#thsGate){display:none!important}.ths:not(.locked) #thsGate{display:none}
 #thsModal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
 #thsModal .card{width:min(360px,100%);background:#fff;border:2.5px solid #111;border-radius:14px;overflow:hidden;box-shadow:6px 6px 0 #ee1d3e}
 #thsModal .pad{padding:16px}#thsModal h3{font:700 28px/1 var(--cond);margin:0 0 10px}#thsModal p{font:400 13.5px/1.55 var(--sans);margin:0 0 8px}
@@ -415,7 +421,12 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
       </div>
     </div>
   </section>
-  <section class="view ths" id="v-thseats">
+  <section class="view ths locked" id="v-thseats">
+    <div id="thsGate" role="dialog" aria-modal="true" aria-labelledby="thsGQ"><div class="win card"><div class="bar"><span>locked.exe</span><a href="#tour" aria-label="close">✕</a></div>
+      <div class="pad"><div class="lk">🔒</div><div class="tag2">THAI ARMY ONLY 🇹🇭</div><h3 id="thsGQ"><span>โห่ ฮี่ โห่ ฮี่</span> <span>โห่ ฮี่ โห่ ฮี่ โหยยยย</span></h3>
+        <div class="hint">Hint: 🦉ei ไม้โท 💍 เท่าจำนวนเมมเบอร์</div>
+        <form id="thsGForm" autocomplete="off"><input id="thsPw" type="text" placeholder="your answer…" aria-label="answer" autocapitalize="off" spellcheck="false"><button type="submit">ENTER</button></form>
+        <div id="thsGErr"></div></div></div></div>
     <div class="win"><div class="bar"><span>rajamangala_live.exe</span><span>■ ■ ✕</span></div>
       <div class="pad" style="padding:14px 14px 4px">
         <span class="thstape">THAI ARMY ONLY 🇹🇭</span><div class="thsh">HOHEEHOHEHOHEHOHIW</div>
@@ -1098,7 +1109,18 @@ function thsForm(){
     catch(e){modal.hidden=true;err('Couldn\'t send — check your internet and try again')}};
 }
 let thsInit=false;
-function thsOpen(){if(!thsInit){thsInit=true;
+const THS_PW_HASH='31c6ed40a4548d3082b6921b839f96cf7996a461c9c9fb8ea3d2b44bfeb08207'; // sha-256 of the normalised answer
+const thsNorm=t=>t.normalize('NFC').replace(/\s+/g,'').replace(/\u0E49\u0E34/g,'\u0E34\u0E49').toLowerCase(); // ignore spaces + tone/vowel mark order
+async function thsSha(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(thsNorm(t)));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+let thsGateInit=false;
+function thsGate(){const sec=document.getElementById('v-thseats');let ok=false;try{ok=localStorage.getItem('ths_pw')===THS_PW_HASH}catch(e){}
+  if(ok){sec.classList.remove('locked');return true}
+  sec.classList.add('locked');
+  if(!thsGateInit){thsGateInit=true;document.getElementById('thsGForm').onsubmit=async e=>{e.preventDefault();const inp=document.getElementById('thsPw'),err=document.getElementById('thsGErr');
+    const h=await thsSha(inp.value);if(h===THS_PW_HASH){try{localStorage.setItem('ths_pw',h)}catch(e){}gc('thseats-unlock');err.textContent='';inp.value='';thsOpen()}
+    else{err.textContent='not quite — try again';inp.select()}}}
+  return false}
+function thsOpen(){if(!thsGate())return;if(!thsInit){thsInit=true;
     document.getElementById('thsDays').onclick=e=>{const b=e.target.closest('button');if(!b)return;thsDay=b.dataset.d;document.querySelectorAll('#thsDays button').forEach(x=>x.classList.toggle('on',x===b));document.getElementById('thsInfo').hidden=true;thsRender()};
     document.getElementById('thsSrc').href=THS_SRC;thsForm();thsLoad();setInterval(()=>{if(location.hash==='#thseats')thsLoad()},60e3)}
   setTimeout(thsMap,0)}
