@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-12",
+"updated": "2026-11-13",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -178,20 +178,6 @@ window.JINDAY={
 "post": "https://x.com/ALittleBraver92/status/2115023708691530229",
 "img": "jinday/alittlebraver92-lovequest.jpg",
 "sortDate": "2026-12-02"
-},
-{
-"name": "ONLY JIN Cafe Event",
-"owner": "@jin_fantree",
-"type": "cafe event",
-"dates": [
-"2026-12-03",
-"2026-12-04",
-"2026-12-05",
-"2026-12-06"
-],
-"desc": "Bangkok stop of the \"Origin Only Jin\" cafe events (also Seoul & Tokyo). Cafe to be announced.",
-"post": "https://x.com/jin_fantree/status/2115857626886242749",
-"img": "jinday/jinfantree-onlyjin-cafe.jpg"
 },
 {
 "name": "JIN Day in Bangkok · Vehicle Ad Banner",
