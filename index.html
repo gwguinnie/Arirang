@@ -1023,8 +1023,18 @@ function thsCSV(t){const rows=[];let row=[],f='',q=false;for(let i=0;i<t.length;
 function thsTime(s){const m=String(s).match(/(\d+)[\/\-.](\d+)[\/\-.](\d+)[ ,T]+(\d+):(\d+)(?::(\d+))?/);if(!m)return null;let a=+m[1],b=+m[2],y=+m[3];if(y>2400)y-=543;
   let d=a,mo=b;if(b>12&&a<=12){d=b;mo=a}return Date.UTC(y,mo-1,d,+m[4]-7,+m[5],+(m[6]||0))}
 function thsAgo(t){if(!t)return '';const s=Math.max(0,(Date.now()-t)/1000);if(s<60)return 'just now';if(s<3600)return Math.floor(s/60)+' min ago';if(s<86400)return Math.floor(s/3600)+' h ago';return Math.floor(s/86400)+' d ago'}
-async function thsLoad(){try{const r=await fetch(THS_CSV+'&t='+Date.now());const rows=thsCSV(await r.text()).slice(1).filter(r=>r.length>=4&&THS_SEC[(r[2]||'').trim().toUpperCase()]);
-  thsRows=rows.map(r=>({t:thsTime(r[0]),day:r[1].trim(),sec:r[2].trim().toUpperCase(),emo:r[3].trim()}));thsRender()}catch(e){const n=document.getElementById('thsErr');if(n)n.textContent='couldn\'t load the latest seats — try again in a moment'}}
+const thsSleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function thsFetchCSV(){let last;for(let i=0;i<3;i++){try{const r=await fetch(THS_CSV,{cache:'no-cache'});if(!r.ok)throw new Error('http '+r.status);const t=await r.text();if(!/^[^\n]*,/.test(t)||/<html/i.test(t.slice(0,200)))throw new Error('not csv');return t}catch(e){last=e;await thsSleep(i?7000:2500)}}throw last}
+function thsUse(text){const rows=thsCSV(text).slice(1).filter(r=>r.length>=4&&THS_SEC[(r[2]||'').trim().toUpperCase()]);
+  thsRows=rows.map(r=>({t:thsTime(r[0]),day:(r[1]||'').trim(),sec:r[2].trim().toUpperCase(),emo:(r[3]||'').trim()}));thsRender()}
+let thsBusy=false;
+async function thsLoad(){if(thsBusy)return;thsBusy=true;const n=document.getElementById('thsErr');
+  if(!thsRows.length){try{const c=JSON.parse(localStorage.getItem('ths_csv')||'null');if(c&&c.text)thsUse(c.text)}catch(_){}}
+  try{const text=await thsFetchCSV();try{localStorage.setItem('ths_csv',JSON.stringify({t:Date.now(),text}))}catch(e){}if(n)n.textContent='';thsUse(text)}
+  catch(e){console.warn('TH SEATS load failed',e);let c=null;try{c=JSON.parse(localStorage.getItem('ths_csv')||'null')}catch(_){}
+    if(c&&c.text){try{thsUse(c.text)}catch(_){}const m=Math.max(1,Math.round((Date.now()-c.t)/60000));if(n)n.textContent=`showing seats from ${m} min ago — reconnecting…`}
+    else if(n)n.textContent='couldn\'t load the latest seats — try again in a moment'}
+  finally{thsBusy=false}}
 // ---- map
 const TCX=200,TCY=200,TSY=0.86,TP=(r,a)=>{a=(a+90)*Math.PI/180;/* rotated: E top, W bottom, S right, N left */return [TCX+r*Math.cos(a),TCY+r*TSY*Math.sin(a)]};
 function thsArc(r0,r1,a0,a1){const n=Math.max(3,Math.ceil(Math.abs(a1-a0)/4));let d='';for(let i=0;i<=n;i++){const[x,y]=TP(r0,a0+(a1-a0)*i/n);d+=(i?'L':'M')+x.toFixed(2)+','+y.toFixed(2)}for(let i=n;i>=0;i--){const[x,y]=TP(r1,a0+(a1-a0)*i/n);d+='L'+x.toFixed(2)+','+y.toFixed(2)}return d+'Z'}
@@ -1126,7 +1136,7 @@ function thsGate(){const sec=document.getElementById('v-thseats');let ok=false;t
   return false}
 function thsOpen(){if(!thsGate())return;if(!thsInit){thsInit=true;
     document.getElementById('thsDays').onclick=e=>{const b=e.target.closest('button');if(!b)return;thsDay=b.dataset.d;document.querySelectorAll('#thsDays button').forEach(x=>x.classList.toggle('on',x===b));document.getElementById('thsInfo').hidden=true;thsRender()};
-    document.getElementById('thsSrc').href=THS_SRC;thsForm();thsLoad();setInterval(()=>{if(location.hash==='#thseats')thsLoad()},60e3)}
+    document.getElementById('thsSrc').href=THS_SRC;thsForm();thsLoad();setInterval(()=>{if(location.hash==='#thseats'&&!document.hidden)thsLoad()},120e3);document.addEventListener('visibilitychange',()=>{if(!document.hidden&&location.hash==='#thseats')thsLoad()})}
   setTimeout(thsMap,0)}
 window.THS_OK=false;
 (async()=>{const preview=/[?&]thseats\b/.test(location.search);if(!THS_PUBLIC&&!preview)return;
