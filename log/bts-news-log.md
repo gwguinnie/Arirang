@@ -1,5 +1,10 @@
 # BTS news log
 
+## 2026-11-13 (เที่ยง)
+- V first reserve forces training, Instagram photos (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111309130822643
+- Jin tops Podoal weekly Member ranking, Nov week 1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111308180186440
+- Jimin "Who" 175M Spotify Japan streams, in Spotify Japan 10th Anniversary Playlist (StarNews) https://starnewskorea.com/en/music/2026/11/12/2026111207285680042
+
 ## 2026-11-12 (เที่ยง)
 - Jung Kook GOLDEN 156 straight weeks on Spotify global weekly albums chart (StarNews) https://www.starnewskorea.com/en/music/2026/11/12/2026111207264279186
 - Jung Kook Instagram record: most posts with 1M+ shares (9), ahead of Messi (StarNews) https://starnewskorea.com/en/star/2026/11/11/2026111108002190530
