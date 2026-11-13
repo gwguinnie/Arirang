@@ -972,7 +972,7 @@ async function jdInit(){
   jdPins(true);if(jdSel)jdPick(jdSel,false);
 }
 /* ---------- TH SEATS (Thai-only, hidden until THS_PUBLIC) ---------- */
-const THS_PUBLIC=false; // owner preview only until approved: open …/Arirang/?thseats#thseats
+const THS_PUBLIC=true; // owner preview only until approved: open …/Arirang/?thseats#thseats
 const THS_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTydr6a9xnXg_-d-7QAkuL7ZMYAZQRGOVr1oMYVbcNwkWUZFcDFf-C1oMYlQZ9CB8Fwzfq2RA8mDisi/pub?gid=1065541593&single=true&output=csv';
 const THS_FORM='https://docs.google.com/forms/d/e/1FAIpQLSe-gY2Ne0TqDHnkRKmcLAirqaHUWAOuYMCZxlEcEhqIcHFkWQ/formResponse';
 const THS_ENT={date:'entry.1804838075',sec:'entry.282100232',emo:'entry.1625149561',dev:'entry.1231142801'};
@@ -987,6 +987,7 @@ const THS_STANDS=[['S1','ABCDEFGHIJKL'],['S2','ABCDEFGHIJKL'],['W1',['A','B','C'
   ['N1','ABCDEFGHIJKL'],['N2','ABCDEFGHIJKL'],['E1','ABCDEFGHIJKLMNOPQRS'],['E2','ABCDEFGHIJKLMNOPQRSTUV'],['E3','ABCDEFGHIJKLMNOPQRST']];
 const thsIn=(l,a,b)=>l>=a&&l<=b;
 function thsPrice(dir,tier,l){ // from the colours of the official seating plan
+  if(l.length>1)return 'p63'; // WFG, WMN (blue)
   if(tier===1&&(dir==='E'||dir==='W')&&thsIn(l,'G','M'))return 'p68';
   if(tier===1)return 'p63';
   if(tier===2&&(dir==='E'||dir==='W')&&thsIn(l,'I','N'))return 'p63';
@@ -997,7 +998,7 @@ function thsPrice(dir,tier,l){ // from the colours of the official seating plan
 }
 const THS_SEC={}; // code -> {code,area,tier,price,a0,a1,r0,r1,floor?}
 THS_STANDS.forEach(([st,letters])=>{const dir=st[0],tier=+st[1],L=Array.isArray(letters)?letters:letters.split('');const [A0,A1]=THS_DIR[dir],[r0,r1]=THS_TIER[tier];
-  L.forEach((l,i)=>{const code=l.length>1?dir+l:st+l;THS_SEC[code]={code,area:dir,tier,group:st,price:thsPrice(dir,tier,l[0]),a0:A0+(A1-A0)*i/L.length,a1:A0+(A1-A0)*(i+1)/L.length,r0,r1}})});
+  L.forEach((l,i)=>{const code=l.length>1?dir+l:st+l;THS_SEC[code]={code,area:dir,tier,group:st,price:thsPrice(dir,tier,l),a0:A0+(A1-A0)*i/L.length,a1:A0+(A1-A0)*(i+1)/L.length,r0,r1}})});
 for(let i=1;i<=24;i++){const c=175-(i-1)*15;THS_SEC['A'+i]={code:'A'+i,area:'A',tier:0,group:'A',price:'p68',a0:c-7.5,a1:c+7.5,r0:64,r1:108,floor:1}}
 for(let i=1;i<=16;i++){const c=175-(i-1)*22.5;THS_SEC['V'+i]={code:'V'+i,area:'V',tier:0,group:'V',price:'vip',a0:c-11.25,a1:c+11.25,r0:24,r1:60,floor:1}}
 const THS_AREA_NAME={S:'S · south',N:'N · north',E:'E · east',W:'W · west',A:'Floor A',V:'Floor V · VIP'};
