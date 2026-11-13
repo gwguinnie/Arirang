@@ -1118,7 +1118,7 @@ function thsGate(){const sec=document.getElementById('v-thseats');let ok=false;t
   if(ok){sec.classList.remove('locked');return true}
   sec.classList.add('locked');
   if(!thsGateInit){thsGateInit=true;document.getElementById('thsGForm').onsubmit=async e=>{e.preventDefault();const inp=document.getElementById('thsPw'),err=document.getElementById('thsGErr');
-    const ok=/^[\u0E2B\u0E2E][\u0E34\u0E35][\u0E48-\u0E4B]?\u0E27+$/.test(thsNorm(inp.value).replace(/([\u0E48-\u0E4B])([\u0E34\u0E35])/g,'$2$1')); // ห/ฮ + ิ/ี + optional tone + ว…
+    const ok=/^[\u0E2B\u0E2E][\u0E34\u0E35][\u0E49\u0E4A]?\u0E27+$/.test(thsNorm(inp.value).replace(/([\u0E48-\u0E4B])([\u0E34\u0E35])/g,'$2$1')); // ห/ฮ + ิ/ี + optional tone + ว…
     if(ok){const h=THS_PW_HASH,hungry=/^\u0E2B\u0E34\u0E27+$/.test(thsNorm(inp.value));try{localStorage.setItem('ths_pw',h)}catch(e){}gc(hungry?'thseats-unlock-hungry':'thseats-unlock');err.textContent='';inp.value='';
       if(hungry){const f=document.getElementById('thsGForm'),m=document.getElementById('thsHungry');f.hidden=true;m.hidden=false;document.getElementById('thsHGo').onclick=()=>{f.hidden=false;m.hidden=true;thsOpen()};return}
       thsOpen()}
