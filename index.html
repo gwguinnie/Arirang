@@ -99,7 +99,7 @@ nav.tabs a.thtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.thtab.on{backgrou
 #thsGate{position:fixed;inset:0;background:rgba(17,17,17,.55);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
 #thsGate .card{width:min(360px,100%);margin:0;box-shadow:6px 6px 0 #ee1d3e}#thsGate .bar a{color:#fff;text-decoration:none;font-size:16px;padding:0 4px}
 #thsGate .pad{padding:20px 18px 18px;text-align:center}#thsGate .lk{font-size:36px;line-height:1;margin-bottom:8px}#thsGate .tag2{display:inline-block;background:#ee1d3e;color:#fff;font:400 11px var(--mono);letter-spacing:.08em;padding:3px 8px;border-radius:4px;margin-bottom:10px}
-#thsGate h3 span{display:block;white-space:nowrap}#thsGate h3{font:700 23px/1.35 'Sukhumvit Set','Thonburi','Noto Sans Thai','Leelawadee UI',var(--sans);margin:0 0 16px}
+#thsGate .q1,#thsGate .q2{font:400 15px/1.4 'Sukhumvit Set','Thonburi','Noto Sans Thai',var(--sans);color:#444}#thsGate .q1{margin-bottom:4px}#thsGate .q2{margin:-8px 0 14px}#thsGate h3 span{display:block;white-space:nowrap}#thsGate h3{font:700 23px/1.35 'Sukhumvit Set','Thonburi','Noto Sans Thai','Leelawadee UI',var(--sans);margin:0 0 16px}
 #thsGate .hint{font:400 13px/1.5 'Sukhumvit Set','Thonburi','Noto Sans Thai',var(--mono);color:#555;background:#f6f1ea;border:1.5px dashed #bbb;border-radius:8px;padding:6px 10px;margin:-6px 0 14px}#thsGate form{display:flex;gap:8px}#thsGate input{flex:1;min-width:0;border:2.5px solid #111;border-radius:10px;padding:11px 12px;font:400 16px var(--sans)}#thsGate button{border:2.5px solid #111;border-radius:10px;background:#ee1d3e;color:#fff;font:700 18px var(--cond);padding:0 16px;box-shadow:3px 3px 0 #111;cursor:pointer}
 #thsGErr{color:#c8102e;font:400 12.5px var(--mono);min-height:18px;margin-top:8px}.ths.locked>*:not(#thsGate){display:none!important}.ths:not(.locked) #thsGate{display:none}
 #thsModal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
@@ -423,8 +423,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
   </section>
   <section class="view ths locked" id="v-thseats">
     <div id="thsGate" role="dialog" aria-modal="true" aria-labelledby="thsGQ"><div class="win card"><div class="bar"><span>locked.exe</span><a href="#tour" aria-label="close">✕</a></div>
-      <div class="pad"><div class="lk">🔒</div><div class="tag2">THAI ARMY ONLY 🇹🇭</div><h3 id="thsGQ"><span>โห่ ฮี่ โห่ ฮี่</span> <span>โห่ ฮี่ โห่ ฮี่ โหยยยย</span></h3>
-        <div class="hint">Hint: 🦉ei ไม้โท 💍 เท่าจำนวนเมมเบอร์</div>
+      <div class="pad"><div class="lk">🔒</div><div class="tag2">THAI ARMY ONLY 🇹🇭</div><div class="q1">ถ้าคนไทยได้ยินคนตะโกนว่า…</div><h3 id="thsGQ"><span>“โห่ ฮี่ โห่ ฮี่</span> <span>โห่ ฮี่ โห่ ฮี่ โหยยยย”</span></h3><div class="q2">คุณจะตอบว่า…</div>
         <form id="thsGForm" autocomplete="off"><input id="thsPw" type="text" placeholder="your answer…" aria-label="answer" autocapitalize="off" spellcheck="false"><button type="submit">ENTER</button></form>
         <div id="thsGErr"></div></div></div></div>
     <div class="win"><div class="bar"><span>rajamangala_live.exe</span><span>■ ■ ✕</span></div>
@@ -1117,7 +1116,8 @@ function thsGate(){const sec=document.getElementById('v-thseats');let ok=false;t
   if(ok){sec.classList.remove('locked');return true}
   sec.classList.add('locked');
   if(!thsGateInit){thsGateInit=true;document.getElementById('thsGForm').onsubmit=async e=>{e.preventDefault();const inp=document.getElementById('thsPw'),err=document.getElementById('thsGErr');
-    const h=await thsSha(inp.value);if(h===THS_PW_HASH){try{localStorage.setItem('ths_pw',h)}catch(e){}gc('thseats-unlock');err.textContent='';inp.value='';thsOpen()}
+    const ok=/^[\u0E2B\u0E2E][\u0E34\u0E35][\u0E48-\u0E4B]?\u0E27+$/.test(thsNorm(inp.value).replace(/([\u0E48-\u0E4B])([\u0E34\u0E35])/g,'$2$1')); // ห/ฮ + ิ/ี + optional tone + ว…
+    if(ok){const h=THS_PW_HASH;try{localStorage.setItem('ths_pw',h)}catch(e){}gc('thseats-unlock');err.textContent='';inp.value='';thsOpen()}
     else{err.textContent='not quite — try again';inp.select()}}}
   return false}
 function thsOpen(){if(!thsGate())return;if(!thsInit){thsInit=true;
