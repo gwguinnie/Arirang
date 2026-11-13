@@ -1087,7 +1087,7 @@ function thsRender(){thsDraw();const rows=thsRows.filter(r=>r.day===thsDay);
   const pc={};rows.forEach(r=>{const p=THS_SEC[r.sec].price;pc[p]=(pc[p]||0)+1});
   document.getElementById('thsPrice').innerHTML=Object.entries(THS_PRICE).map(([k,[n,c,cap]])=>{const f=pc[k]||0,p=f/cap*100;return `<div class="thsrow"><div class="thsrt"><i style="background:${c}"></i>${n}<span>${f.toLocaleString()} / ${cap.toLocaleString()} seats</span></div><div class="thsbar"><i style="width:${f?Math.max(.8,p):0}%"></i></div><div class="thsrp">🇹🇭 ${p.toFixed(1)}% · 🫥 ${(100-p).toFixed(1)}%</div></div>`}).join('');
   const now=Date.now();thsPending=thsPending.filter(p=>now-p.t<10*60e3);
-  const latest=[...thsPending.filter(p=>p.day===thsDay).map(p=>Object.assign({pending:1},p)),...rows.slice().sort((a,b)=>(b.t||0)-(a.t||0))].slice(0,12);
+  const latest=[...thsPending.filter(p=>p.day===thsDay).map(p=>Object.assign({pending:1},p)),...rows.slice().sort((a,b)=>(b.t||0)-(a.t||0))].slice(0,7);
   document.getElementById('thsFeed').innerHTML=latest.length?latest.map(r=>{const s=THS_SEC[r.sec],[pn,pcol]=THS_PRICE[s.price];return `<div class="thsf"><span class="e">${esc(r.emo)}</span><b>${esc(r.sec)}</b><span class="thsp"><i style="background:${pcol}"></i>${esc(pn.replace('VIP · ',''))}</span><small>${r.pending?'just now · syncing':thsAgo(r.t)}</small></div>`}).join(''):'<div class="thsempty">no seats yet for this day — be the first 🇹🇭</div>';
 }
 function thsForm(){
