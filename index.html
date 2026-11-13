@@ -67,11 +67,48 @@ nav.tabs a{flex:1;justify-content:center;font-size:14px;padding:9px 4px}
 nav.tabs a.on{background:var(--red);border-color:var(--red);color:var(--w)}
 nav.tabs a.on:after{content:"♥";font-size:11px}
 .view{display:none}.view.on{display:block}
+/* th seats */
+nav.tabs a.thtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.thtab.on{background:#ee1d3e;color:#fff}
+.ths .win{margin-bottom:14px}
+.thstape{display:inline-block;background:#ee1d3e;color:#fff;font:700 14px/1 var(--cond);letter-spacing:.1em;padding:4px 9px 3px;transform:rotate(-1.5deg)}
+.thsh{font:700 34px/.95 var(--cond);margin:6px 0 2px;word-break:break-all}
+.thssub{font:400 12px/1.5 var(--mono);color:#555}
+.thsnote{margin:10px 0 0;border:1.5px dashed #ee1d3e;border-radius:8px;padding:7px 9px;font:400 11px/1.5 var(--mono);color:#b0122a}
+#thsDays{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}#thsDays button{border:2px solid #111;border-radius:99px;padding:5px 14px;font:400 12.5px var(--mono);background:#fff;cursor:pointer}#thsDays button.on{background:#111;color:#fff}
+#thsMap{position:relative;height:380px;touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab;background:#fff}
+#thsSvg{width:100%;height:100%;display:block}
+.thsctl{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:4px}.thsctl button{width:32px;height:32px;border:2px solid #111;border-radius:7px;background:#fff;font:700 16px var(--sans);cursor:pointer}
+#thsLv{position:absolute;left:10px;top:10px;display:flex;flex-direction:column;gap:4px;pointer-events:none}#thsLv i{width:9px;height:9px;border-radius:50%;border:1.5px solid #111;background:#fff}#thsLv i.on{background:#ee1d3e}
+.thshint{font:400 10.5px var(--mono);color:#777;text-align:center;padding:6px 10px}
+#thsInfo{margin:0 12px 10px;border:2px solid #111;border-radius:10px;padding:8px 10px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font:400 12px var(--mono)}#thsInfo b{font:700 20px var(--cond)}#thsInfo em{font-style:normal;margin-left:auto;color:#ee1d3e}
+.thssec{font:700 20px var(--cond);letter-spacing:.03em;padding:12px 12px 4px}
+.thsrow{padding:8px 12px;border-top:1px solid #eee}.thsrt{display:flex;align-items:center;gap:8px;font:600 13px var(--sans)}.thsrt i{width:14px;height:14px;border-radius:3px;border:1.5px solid #111}.thsrt span{margin-left:auto;font:400 11px var(--mono);color:#555}
+.thsbar{height:10px;border:1.5px solid #111;border-radius:5px;overflow:hidden;margin:5px 0 3px;background:#ddd}.thsbar i{display:block;height:100%;background:#ee1d3e}
+.thsrp{font:400 11px var(--mono);color:#333}
+.thssrc{font:400 10px/1.5 var(--mono);color:#777;padding:6px 12px 12px}.thssrc a{color:#b0122a}
+.thsf{display:flex;align-items:center;gap:12px;padding:7px 12px;border-top:1px solid #eee}.thsf .e{font:24px/1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;width:28px}.thsf b{font:700 20px var(--cond);width:52px}
+.thsp{display:inline-flex;align-items:center;gap:5px;font:400 11px var(--mono)}.thsp i{width:10px;height:10px;border-radius:2px;border:1px solid #111}.thsf small{margin-left:auto;font:400 10.5px var(--mono);color:#888}
+.thsempty{padding:14px 12px;font:400 12px var(--mono);color:#777;text-align:center;border-top:1px solid #eee}
+.thsform{padding:14px}.thsform label{display:block;font:400 10.5px var(--mono);color:#666;letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px}
+.thsform select{width:100%;border:2px solid #111;border-radius:8px;padding:9px 10px;font:500 15px var(--sans);background:#fff;margin-bottom:10px;-webkit-appearance:none;appearance:none}
+#thsChips{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 10px;min-height:4px}#thsChips span{border:2px solid #111;border-radius:7px;padding:2px 8px;font:400 11.5px var(--mono)}
+#thsEmo{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}#thsEmo button{border:2px solid #ddd;border-radius:10px;background:#fff;padding:6px 0 3px;cursor:pointer}#thsEmo button span{font:22px/1.1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;display:block}#thsEmo button small{font:400 9px var(--mono);color:#666}#thsEmo button.on{border-color:#ee1d3e;background:#fff0f2}
+#thsSubmit{width:100%;margin-top:14px;background:#ee1d3e;color:#fff;border:2px solid #111;border-radius:10px;padding:11px;font:700 22px var(--cond);letter-spacing:.06em;box-shadow:4px 4px 0 #111;cursor:pointer}
+#thsFErr{color:#d4002a;font:400 12px var(--mono);margin-top:8px;min-height:1px}
+.thsfine{font:400 10.5px/1.5 var(--mono);color:#666;margin-top:10px}
+#thsModal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
+#thsModal .card{width:min(360px,100%);background:#fff;border:2.5px solid #111;border-radius:14px;overflow:hidden;box-shadow:6px 6px 0 #ee1d3e}
+#thsModal .pad{padding:16px}#thsModal h3{font:700 28px/1 var(--cond);margin:0 0 10px}#thsModal p{font:400 13.5px/1.55 var(--sans);margin:0 0 8px}
+#thsModal .li{font:400 13px/1.5 var(--sans);margin:0 0 6px}
+#thsModal label.ck{display:flex;gap:10px;align-items:center;border:2px solid #111;border-radius:10px;padding:10px;margin:12px 0;font:600 13.5px var(--sans);cursor:pointer}#thsModal label.ck input{width:20px;height:20px;accent-color:#ee1d3e}
+#thsModal .btns{display:flex;gap:8px}#thsModal .btns button{flex:1;padding:10px;border:2px solid #111;border-radius:10px;font:700 18px var(--cond);letter-spacing:.05em;background:#fff;cursor:pointer}#thsModal #thsGo{background:#ee1d3e;color:#fff;box-shadow:3px 3px 0 #111}#thsModal #thsGo:disabled{opacity:.4;box-shadow:none}
+#thsDone{margin-top:10px;border:2px solid #111;border-radius:10px;padding:9px;font:600 13px var(--sans);background:#eaf7ec;text-align:center}
+
 /* jin day (pink) */
 [hidden]{display:none!important}
 nav.tabs a.jdtab{border-color:#e87ea3;color:#b23a66}
 nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
-@media(max-width:560px){nav.tabs{flex-wrap:wrap}nav.tabs a{flex:1 1 15%}nav.tabs a[data-v=random]{flex:1.9 1 26%}nav.tabs a.jdtab{flex:1 1 100%}}
+@media(max-width:560px){nav.tabs{flex-wrap:wrap}nav.tabs a{flex:1 1 15%}nav.tabs a[data-v=random]{flex:1.9 1 26%}nav.tabs a.jdtab{flex:1 1 100%}nav.tabs a.thtab{flex:1 1 100%}}
 .jd{--pk:#e87ea3;--pk2:#b23a66;--pkl:#ffe4ee;--pkb:#f4b6ca;--pi:#3a1622}
 .jdwin{background:#fff7fa;border:2px solid var(--pi);border-radius:16px;overflow:hidden;color:var(--pi)}
 .jdhead{padding:16px 16px 10px;background:var(--pkl) radial-gradient(#f8c3d4 1.2px,transparent 1.2px) 0 0/11px 11px}
@@ -307,6 +344,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
     <a class="tag" href="#ticket" data-v="ticket">Ticket</a>
     <a class="tag" href="#random" data-v="random">Surprise Song</a>
     <a class="tag jdtab" href="#jinday" data-v="jinday" hidden>JIN DAY 🎂</a>
+    <a class="tag thtab" href="#thseats" data-v="thseats" hidden>hoheehohehohehohiw 🇹🇭</a>
   </nav>
 
   <section class="view" id="v-tour">
@@ -376,6 +414,40 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
         <div class="jdfoot">fan-made ♡ info from each project owner — check their post before you go</div></div>
       </div>
     </div>
+  </section>
+  <section class="view ths" id="v-thseats">
+    <div class="win"><div class="bar"><span>rajamangala_live.exe</span><span>■ ■ ✕</span></div>
+      <div class="pad" style="padding:14px 14px 4px">
+        <span class="thstape">THAI ARMY ONLY 🇹🇭</span><div class="thsh">HOHEEHOHEHOHEHOHIW</div>
+        <div class="thssub" id="thsTotal">loading…</div>
+        <div class="thsnote">ⓘ Numbers only count seats submitted on this page — not official ticket data.</div>
+        <div id="thsDays"><button class="on" data-d="3 Dec 2026">3 Dec</button><button data-d="5 Dec 2026">5 Dec</button><button data-d="6 Dec 2026">6 Dec</button></div>
+        <div id="thsErr" class="thssub" style="color:#d4002a"></div>
+      </div>
+      <div id="thsMap"><svg id="thsSvg" viewBox="-20 10 440 380" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="thsctl"><button id="thsIn" aria-label="Zoom in">+</button><button id="thsOut" aria-label="Zoom out">−</button><button id="thsReset" aria-label="Reset">⟲</button></div>
+        <div id="thsLv"><i class="on"></i><i></i><i></i><i></i></div></div>
+      <div class="thshint">pinch or + to zoom · drag to move · tap an area to see its number</div>
+      <div id="thsInfo" hidden></div>
+      <div class="thssec">BY TICKET PRICE</div><div id="thsPrice"></div>
+      <div class="thssrc">🇹🇭 = seats submitted here only. Seats per price: <a id="thsSrc" target="_blank" rel="noopener">@_candyclover on X</a> (from the official seating plan · 65,473 seats total)</div>
+      <div class="thssec">LATEST</div><div id="thsFeed"></div><div style="height:8px"></div>
+    </div>
+    <div class="win"><div class="bar"><span>th_seats.exe</span><span>■ ■ ✕</span></div>
+      <div class="thsform">
+        <div style="font:700 28px var(--cond);margin-bottom:12px">TH SEATS 🇹🇭</div>
+        <label for="thsDate">Show date *</label><select id="thsDate"></select>
+        <label for="thsSec">Section *</label><select id="thsSec"></select><div id="thsChips"></div>
+        <label>Your emoji *</label><div id="thsEmo"></div>
+        <button id="thsSubmit" type="button">SUBMIT 🇹🇭</button>
+        <div id="thsFErr"></div><div id="thsDone" hidden>Thank you 💜 your seat is in — it shows on the map within ~5 minutes</div>
+        <div class="thsfine">anonymous · no name, no row, no seat number · can't be edited after submit · a random device code is saved to stop spam — no personal data</div>
+      </div></div>
+    <div id="thsModal" hidden><div class="card"><div class="bar"><span>before_you_submit.exe</span><span>✕</span></div><div class="pad">
+      <h3>BEFORE YOU SUBMIT 🇹🇭</h3><p>This map is made by Thai ARMY, for Thai ARMY 💜 Please keep it real:</p>
+      <div class="li">✅ Add <b>only your own seat</b></div><div class="li">🚫 Don't add seats that aren't yours</div><div class="li">🚫 Don't spam or send fake data. It messes up the map for everyone</div>
+      <label class="ck"><input type="checkbox" id="thsCk"> This is my own seat</label>
+      <div class="btns"><button id="thsBack" type="button">BACK</button><button id="thsGo" type="button" disabled>SUBMIT</button></div></div></div></div>
   </section>
   <div class="foot"><b>Handle with care:</b> fan-made ♡ not affiliated with BIGHIT MUSIC / HYBE. Souvenir tickets are not real tickets.<br><span id="srcnote"></span> Song list: Korean albums incl. the current tour album ARIRANG, singles &amp; Japanese originals (no skits/remixes). Random tab draws only songs outside the tour main setlist. Spotify / YouTube buttons open a search for the song in each app.</div>
 </div>
@@ -899,12 +971,148 @@ async function jdInit(){
     m.addListener('click',()=>jdPick(p.id,false));return m})});
   jdPins(true);if(jdSel)jdPick(jdSel,false);
 }
+/* ---------- TH SEATS (Thai-only, hidden until THS_PUBLIC) ---------- */
+const THS_PUBLIC=false; // owner preview only until approved: open …/Arirang/?thseats#thseats
+const THS_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vTydr6a9xnXg_-d-7QAkuL7ZMYAZQRGOVr1oMYVbcNwkWUZFcDFf-C1oMYlQZ9CB8Fwzfq2RA8mDisi/pub?gid=1065541593&single=true&output=csv';
+const THS_FORM='https://docs.google.com/forms/d/e/1FAIpQLSe-gY2Ne0TqDHnkRKmcLAirqaHUWAOuYMCZxlEcEhqIcHFkWQ/formResponse';
+const THS_ENT={date:'entry.1804838075',sec:'entry.282100232',emo:'entry.1625149561',dev:'entry.1231142801'};
+const THS_DAYS=[['3 Dec 2026','3 Dec'],['5 Dec 2026','5 Dec'],['6 Dec 2026','6 Dec']];
+const THS_EMO=[['🐨','RM'],['🐹','Jin'],['🐱','SUGA'],['🐿️','j-hope'],['🐥','Jimin'],['🐯','V'],['🐰','JK'],['💜','purple'],['❤️','red'],['🤍','white'],['🖤','black']];
+const THS_PRICE={vip:['VIP · ฿7,800','#c46be0',4940],p68:['฿6,800','#ee1d3e',15408],p63:['฿6,300','#3b6fe0',16621],p53:['฿5,300','#f2c14e',14084],p43:['฿4,300','#55c26b',7427],p33:['฿3,300','#53c3b8',6993]};
+const THS_SRC='https://x.com/_candyclover/status/2064319873673818182';
+// stands: [code, letters, tier, direction]; angles: S 234→306, W -48→48, N 54→126, E 132→228 (clockwise from the first letter)
+const THS_DIR={S:[234,306],W:[-48,48],N:[54,126],E:[132,228]};
+const THS_TIER={1:[118,140],2:[143,166],3:[169,190]};
+const THS_STANDS=[['S1','ABCDEFGHIJKL'],['S2','ABCDEFGHIJKL'],['W1',['A','B','C','D','E','F','FG','G','H','I','J','K','L','M','MN','N','O','P','Q','R','S']],['W2','ABCDEFGHIJKLMNOPQRSTUV'],['W3','ABCDEFGHIJKLMNOPQR'],
+  ['N1','ABCDEFGHIJKL'],['N2','ABCDEFGHIJKL'],['E1','ABCDEFGHIJKLMNOPQRS'],['E2','ABCDEFGHIJKLMNOPQRSTUV'],['E3','ABCDEFGHIJKLMNOPQRST']];
+const thsIn=(l,a,b)=>l>=a&&l<=b;
+function thsPrice(dir,tier,l){ // from the colours of the official seating plan
+  if(tier===1&&(dir==='E'||dir==='W')&&thsIn(l,'G','M'))return 'p68';
+  if(tier===1)return 'p63';
+  if(tier===2&&(dir==='E'||dir==='W')&&thsIn(l,'I','N'))return 'p63';
+  if(tier===2)return 'p53';
+  if(dir==='E'&&thsIn(l,'H','M'))return 'p43';
+  if(dir==='W'&&thsIn(l,'G','L'))return 'p43';
+  return 'p33';
+}
+const THS_SEC={}; // code -> {code,area,tier,price,a0,a1,r0,r1,floor?}
+THS_STANDS.forEach(([st,letters])=>{const dir=st[0],tier=+st[1],L=Array.isArray(letters)?letters:letters.split('');const [A0,A1]=THS_DIR[dir],[r0,r1]=THS_TIER[tier];
+  L.forEach((l,i)=>{const code=l.length>1?dir+l:st+l;THS_SEC[code]={code,area:dir,tier,group:st,price:thsPrice(dir,tier,l[0]),a0:A0+(A1-A0)*i/L.length,a1:A0+(A1-A0)*(i+1)/L.length,r0,r1}})});
+for(let i=1;i<=24;i++){const c=175-(i-1)*15;THS_SEC['A'+i]={code:'A'+i,area:'A',tier:0,group:'A',price:'p68',a0:c-7.5,a1:c+7.5,r0:64,r1:108,floor:1}}
+for(let i=1;i<=16;i++){const c=175-(i-1)*22.5;THS_SEC['V'+i]={code:'V'+i,area:'V',tier:0,group:'V',price:'vip',a0:c-11.25,a1:c+11.25,r0:24,r1:60,floor:1}}
+const THS_AREA_NAME={S:'S · south',N:'N · north',E:'E · east',W:'W · west',A:'Floor A',V:'Floor V · VIP'};
+let thsRows=[],thsDay='3 Dec 2026',thsPending=[];
+function thsDevice(){let d;try{d=localStorage.getItem('ths_dev')}catch(e){}if(!d){d='d-'+Math.random().toString(36).slice(2,8)+Date.now().toString(36).slice(-3);try{localStorage.setItem('ths_dev',d)}catch(e){}}return d}
+function thsCSV(t){const rows=[];let row=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];
+  if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+  else if(c==='"')q=true;else if(c===','){row.push(f);f=''}else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;row.push(f);rows.push(row);row=[];f=''}else f+=c}
+  if(f||row.length){row.push(f);rows.push(row)}return rows}
+function thsTime(s){const m=String(s).match(/(\d+)[\/\-.](\d+)[\/\-.](\d+)[ ,T]+(\d+):(\d+)(?::(\d+))?/);if(!m)return null;let a=+m[1],b=+m[2],y=+m[3];if(y>2400)y-=543;
+  let d=a,mo=b;if(b>12&&a<=12){d=b;mo=a}return Date.UTC(y,mo-1,d,+m[4]-7,+m[5],+(m[6]||0))}
+function thsAgo(t){if(!t)return '';const s=Math.max(0,(Date.now()-t)/1000);if(s<60)return 'just now';if(s<3600)return Math.floor(s/60)+' min ago';if(s<86400)return Math.floor(s/3600)+' h ago';return Math.floor(s/86400)+' d ago'}
+async function thsLoad(){try{const r=await fetch(THS_CSV+'&t='+Date.now());const rows=thsCSV(await r.text()).slice(1).filter(r=>r.length>=4&&THS_SEC[(r[2]||'').trim().toUpperCase()]);
+  thsRows=rows.map(r=>({t:thsTime(r[0]),day:r[1].trim(),sec:r[2].trim().toUpperCase(),emo:r[3].trim()}));thsRender()}catch(e){const n=document.getElementById('thsErr');if(n)n.textContent='couldn\'t load the latest seats — try again in a moment'}}
+// ---- map
+const TCX=200,TCY=200,TSY=0.86,TP=(r,a)=>{a*=Math.PI/180;return [TCX+r*Math.cos(a),TCY+r*TSY*Math.sin(a)]};
+function thsArc(r0,r1,a0,a1){const n=Math.max(3,Math.ceil(Math.abs(a1-a0)/4));let d='';for(let i=0;i<=n;i++){const[x,y]=TP(r0,a0+(a1-a0)*i/n);d+=(i?'L':'M')+x.toFixed(2)+','+y.toFixed(2)}for(let i=n;i>=0;i--){const[x,y]=TP(r1,a0+(a1-a0)*i/n);d+='L'+x.toFixed(2)+','+y.toFixed(2)}return d+'Z'}
+const thsFill=(n,max)=>n?`rgba(238,29,62,${(0.18+0.72*Math.min(1,n/Math.max(1,max))).toFixed(2)})`:'#f3eeee';
+const thsT=(x,y,t,s,c,w,sw)=>`<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" font-family="${w==='DM'?'DMMono,monospace':'BigSh,Arial Narrow,sans-serif'}" font-weight="${w==='DM'?400:700}" font-size="${s}" fill="${c||'#111'}" stroke="#fff" stroke-width="${sw==null?s/5:sw}" paint-order="stroke" pointer-events="none">${t}</text>`;
+let thsLevel=1;
+function thsDraw(){const svg=document.getElementById('thsSvg');if(!svg)return;const rows=thsRows.filter(r=>r.day===thsDay);
+  const cnt={};rows.forEach(r=>{cnt[r.sec]=(cnt[r.sec]||0)+1});
+  const by=f=>{const o={};Object.values(THS_SEC).forEach(s=>{const k=f(s);o[k]=(o[k]||0)+(cnt[s.code]||0)});return o};
+  const L=thsLevel;let g='';
+  const groupKey=s=>L===2?s.area:L===3?(s.floor?s.area:s.group):s.code;
+  const agg=by(groupKey),max=Math.max(1,...Object.values(agg));
+  // stands
+  Object.values(THS_SEC).forEach(s=>{if(s.floor&&L<4)return;const k=groupKey(s),n=agg[k]||0;
+    g+=`<path d="${thsArc(s.r0,s.r1,s.a0,s.a1)}" fill="${L===1?'#f2b3bd':thsFill(n,max)}" stroke="#111" stroke-width="${L===4?.35:.6}" data-k="${k}"/>`});
+  if(L<4){const fa=agg.A||0,fv=agg.V||0;
+    g+=`<path d="${thsArc(64,110,0,360)}" fill="${L===1?'#f2b3bd':thsFill(fa,max)}" stroke="#111" stroke-width=".6" data-k="A"/><path d="${thsArc(24,62,0,360)}" fill="${L===1?'#e9667a':thsFill(fv,max)}" stroke="#111" stroke-width=".6" data-k="V"/>`}
+  g+=`<path d="M${TCX-74},${TCY-62} L${TCX+74},${TCY+62} M${TCX+74},${TCY-62} L${TCX-74},${TCY+62}" stroke="#fff" stroke-width="${L===4?4:8}" pointer-events="none"/><circle cx="${TCX}" cy="${TCY}" r="15" fill="#fff" stroke="#111" stroke-width=".8" pointer-events="none"/>`+thsT(TCX,TCY+2.6,'STAGE',7,'#111','BS',0);
+  if(L===1){const tot=rows.length;g+=`<rect x="${TCX-74}" y="${TCY-26}" width="148" height="52" rx="10" fill="#fff" stroke="#111" stroke-width="2" pointer-events="none"/>`+thsT(TCX,TCY-1,'🇹🇭 '+tot.toLocaleString(),23,'#ee1d3e','BS',0)+thsT(TCX,TCY+16,'Thai ARMY registered',8,'#555','DM',0)}
+  if(L===2){for(const d in THS_DIR){const [a0,a1]=THS_DIR[d],am=(a0+a1)/2,[x,y]=TP((d==='E'||d==='W')?154:154,am);g+=thsT(x,y+5,d+' '+(agg[d]||0),15)}
+    g+=thsT(TCX,TCY-70,'A '+(agg.A||0),13)+thsT(TCX+40,TCY+4,'V '+(agg.V||0),11)}
+  if(L===3){THS_STANDS.forEach(([st])=>{const d=st[0],t=+st[1],[a0,a1]=THS_DIR[d],[r0,r1]=THS_TIER[t],[x,y]=TP((r0+r1)/2,(a0+a1)/2);g+=thsT(x,y+3,st+' '+(agg[st]||0),8.5)});
+    g+=thsT(TCX,TCY-70,'A '+(agg.A||0),13)+thsT(TCX+40,TCY+4,'V '+(agg.V||0),11)}
+  if(L===4)Object.values(THS_SEC).forEach(s=>{const [x,y]=TP((s.r0+s.r1)/2,(s.a0+s.a1)/2),fs=s.floor?5:3.4;g+=thsT(x,y-.3,s.code,fs,'#111','BS',fs/6)+thsT(x,y+fs*.95,String(cnt[s.code]||0),fs*.8,'#111','DM',fs/7)});
+  svg.innerHTML=g;
+  document.querySelectorAll('#thsLv i').forEach((n,i)=>n.classList.toggle('on',i+1===L));
+}
+function thsInfo(k){const el=document.getElementById('thsInfo');if(!el||!k)return;const rows=thsRows.filter(r=>r.day===thsDay);
+  const secs=Object.values(THS_SEC).filter(s=>s.code===k||s.group===k||(s.area===k&&(s.floor||k.length===1)));
+  const n=rows.filter(r=>secs.some(s=>s.code===r.sec)).length;const s=THS_SEC[k];
+  const meta=s?[THS_AREA_NAME[s.area]||s.area,s.tier?'tier '+s.tier:'',THS_PRICE[s.price][0]].filter(Boolean).join(' · '):(THS_AREA_NAME[k]||k);
+  el.innerHTML=`<b>${esc(k)}</b> <span>${esc(meta)}</span><em>🇹🇭 ${n} Thai ARMY</em>`;el.hidden=false}
+function thsMap(){const box=document.getElementById('thsMap');if(!box||box._ok)return;box._ok=1;
+  const svg=document.getElementById('thsSvg');let vb=[-20,10,440,380];const W=[440,370,250,130];
+  const lvOf=w=>w>=420?1:w>=320?2:w>=190?3:4;
+  const apply=()=>{svg.setAttribute('viewBox',vb.map(v=>v.toFixed(2)).join(' '));const l=lvOf(vb[2]);if(l!==thsLevel){thsLevel=l;thsDraw()}};
+  const clamp=()=>{vb[2]=Math.min(440,Math.max(70,vb[2]));vb[3]=vb[2]*380/440;vb[0]=Math.min(420-vb[2]*.5,Math.max(-20-vb[2]*.5,vb[0]));vb[1]=Math.min(390-vb[3]*.5,Math.max(10-vb[3]*.5,vb[1]))};
+  let anim;const goTo=(to,ms=380)=>{cancelAnimationFrame(anim);const from=vb.slice(),t0=performance.now();const st=t=>{const p=Math.min(1,(t-t0)/ms),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;vb=from.map((v,i)=>v+(to[i]-v)*e);apply();if(p<1)anim=requestAnimationFrame(st)};anim=requestAnimationFrame(st)};
+  const center=()=>[vb[0]+vb[2]/2,vb[1]+vb[3]/2];
+  const zoomTo=(w,c)=>{const [cx,cy]=c||center();const h=w*380/440;const to=[cx-w/2,cy-h/2,w,h];const keep=vb;vb=to.slice();clamp();const t=vb.slice();vb=keep;goTo(t)};
+  document.getElementById('thsIn').onclick=()=>{const w=W.find(x=>x<vb[2]-5)||70;zoomTo(w)};
+  document.getElementById('thsOut').onclick=()=>{const w=[...W].reverse().find(x=>x>vb[2]+5)||440;zoomTo(w,w>=440?[200,200]:null)};
+  document.getElementById('thsReset').onclick=()=>zoomTo(440,[200,200]);
+  const upp=()=>{const r=box.getBoundingClientRect();return Math.max(vb[2]/r.width,vb[3]/r.height)};
+  const toSvg=(px,py)=>{const r=box.getBoundingClientRect(),s=upp();const ox=(r.width*s-vb[2])/2,oy=(r.height*s-vb[3])/2;return [vb[0]-ox+(px-r.left)*s,vb[1]-oy+(py-r.top)*s]};
+  const zoomAt=(f,cx,cy)=>{const nw=Math.min(440,Math.max(70,vb[2]*f)),k=nw/vb[2];vb=[cx-(cx-vb[0])*k,cy-(cy-vb[1])*k,nw,vb[3]*k];clamp();apply()};
+  const pts=new Map();let start=null,moved=false;
+  box.addEventListener('pointerdown',e=>{if(e.target.closest('.thsctl'))return;box.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);moved=false;cancelAnimationFrame(anim);start={vb:vb.slice(),pts:new Map(pts)}});
+  box.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;pts.set(e.pointerId,[e.clientX,e.clientY]);const s=upp();
+    if(pts.size===1&&start.pts.size===1){const [sx,sy]=[...start.pts.values()][0];const dx=e.clientX-sx,dy=e.clientY-sy;if(Math.abs(dx)+Math.abs(dy)>5)moved=true;if(!moved)return;vb=[start.vb[0]-dx*s,start.vb[1]-dy*s,start.vb[2],start.vb[3]];clamp();apply()}
+    else if(pts.size===2){const a=[...pts.values()];if(start.pts.size!==2){start={vb:vb.slice(),pts:new Map(pts)};return}const b=[...start.pts.values()];const d1=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]),d0=Math.hypot(b[0][0]-b[1][0],b[0][1]-b[1][1]);moved=true;vb=start.vb.slice();const [cx,cy]=toSvg((b[0][0]+b[1][0])/2,(b[0][1]+b[1][1])/2);zoomAt(d0/d1,cx,cy)}});
+  const up=e=>{pts.delete(e.pointerId);start={vb:vb.slice(),pts:new Map(pts)}};
+  box.addEventListener('pointerup',e=>{if(!moved){const el=document.elementFromPoint(e.clientX,e.clientY);const k=el&&el.closest&&el.closest('[data-k]');if(k)thsInfo(k.dataset.k)}up(e)});box.addEventListener('pointercancel',up);
+  box.addEventListener('wheel',e=>{e.preventDefault();const [cx,cy]=toSvg(e.clientX,e.clientY);zoomAt(Math.exp(e.deltaY*.0015),cx,cy)},{passive:false});
+  apply();
+}
+function thsRender(){thsDraw();const rows=thsRows.filter(r=>r.day===thsDay);
+  document.getElementById('thsTotal').textContent=`🇹🇭 ${rows.length.toLocaleString()} Thai ARMY registered · ${THS_DAYS.find(d=>d[0]===thsDay)[1]}`;
+  const pc={};rows.forEach(r=>{const p=THS_SEC[r.sec].price;pc[p]=(pc[p]||0)+1});
+  document.getElementById('thsPrice').innerHTML=Object.entries(THS_PRICE).map(([k,[n,c,cap]])=>{const f=pc[k]||0,p=f/cap*100;return `<div class="thsrow"><div class="thsrt"><i style="background:${c}"></i>${n}<span>${f.toLocaleString()} / ${cap.toLocaleString()} seats</span></div><div class="thsbar"><i style="width:${f?Math.max(.8,p):0}%"></i></div><div class="thsrp">🇹🇭 ${p.toFixed(1)}% · 🫥 ${(100-p).toFixed(1)}%</div></div>`}).join('');
+  const now=Date.now();thsPending=thsPending.filter(p=>now-p.t<10*60e3);
+  const latest=[...thsPending.filter(p=>p.day===thsDay).map(p=>Object.assign({pending:1},p)),...rows.slice().sort((a,b)=>(b.t||0)-(a.t||0))].slice(0,12);
+  document.getElementById('thsFeed').innerHTML=latest.length?latest.map(r=>{const s=THS_SEC[r.sec],[pn,pcol]=THS_PRICE[s.price];return `<div class="thsf"><span class="e">${esc(r.emo)}</span><b>${esc(r.sec)}</b><span class="thsp"><i style="background:${pcol}"></i>${esc(pn.replace('VIP · ',''))}</span><small>${r.pending?'just now · syncing':thsAgo(r.t)}</small></div>`}).join(''):'<div class="thsempty">no seats yet for this day — be the first 🇹🇭</div>';
+}
+function thsForm(){
+  const sel=document.getElementById('thsSec');const groups=[['Floor · VIP','V'],['Floor · A','A'],['South (S1 · S2)','S'],['North (N1 · N2)','N'],['East (E1 · E2 · E3)','E'],['West (W1 · W2 · W3)','W']];
+  sel.innerHTML='<option value="">choose section</option>'+groups.map(([lab,a])=>`<optgroup label="${lab}">`+Object.values(THS_SEC).filter(s=>s.area===a).sort((x,y)=>x.code.localeCompare(y.code,'en',{numeric:true})).map(s=>`<option>${s.code}</option>`).join('')+'</optgroup>').join('');
+  const chips=document.getElementById('thsChips');
+  sel.onchange=()=>{const s=THS_SEC[sel.value];chips.innerHTML=s?[THS_AREA_NAME[s.area],s.tier?'tier '+s.tier:''].filter(Boolean).map(t=>`<span>${t}</span>`).join('')+`<span style="background:${THS_PRICE[s.price][1]};color:#fff;border-color:#111">${THS_PRICE[s.price][0]}</span>`:'';err('')};
+  const ds=document.getElementById('thsDate');ds.innerHTML='<option value="">choose show</option>'+THS_DAYS.map(([v])=>`<option>${v}</option>`).join('');
+  let emo='';const eg=document.getElementById('thsEmo');eg.innerHTML=THS_EMO.map(([e,n])=>`<button type="button" data-e="${e}"><span>${e}</span><small>${n}</small></button>`).join('');
+  eg.onclick=e=>{const b=e.target.closest('button');if(!b)return;emo=b.dataset.e;eg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));err('')};
+  const err=t=>{document.getElementById('thsFErr').textContent=t};
+  const modal=document.getElementById('thsModal'),ck=document.getElementById('thsCk'),go=document.getElementById('thsGo');
+  document.getElementById('thsSubmit').onclick=()=>{if(!ds.value)return err('Choose your show date');if(!sel.value)return err('Choose your section');if(!emo)return err('Pick your emoji');ck.checked=false;go.disabled=true;modal.hidden=false};
+  ck.onchange=()=>{go.disabled=!ck.checked};
+  document.getElementById('thsBack').onclick=()=>{modal.hidden=true};
+  go.onclick=async()=>{go.disabled=true;const body=new URLSearchParams({[THS_ENT.date]:ds.value,[THS_ENT.sec]:sel.value,[THS_ENT.emo]:emo,[THS_ENT.dev]:thsDevice()});
+    try{await fetch(THS_FORM,{method:'POST',mode:'no-cors',body});thsPending.unshift({t:Date.now(),day:ds.value,sec:sel.value,emo});gc('thseats-submit');
+      modal.hidden=true;document.getElementById('thsDone').hidden=false;setTimeout(()=>{document.getElementById('thsDone').hidden=true},4000);
+      sel.value='';chips.innerHTML='';emo='';eg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));thsRender()}
+    catch(e){modal.hidden=true;err('Couldn\'t send — check your internet and try again')}};
+}
+let thsInit=false;
+function thsOpen(){if(!thsInit){thsInit=true;
+    document.getElementById('thsDays').onclick=e=>{const b=e.target.closest('button');if(!b)return;thsDay=b.dataset.d;document.querySelectorAll('#thsDays button').forEach(x=>x.classList.toggle('on',x===b));document.getElementById('thsInfo').hidden=true;thsRender()};
+    document.getElementById('thsSrc').href=THS_SRC;thsForm();thsLoad();setInterval(()=>{if(location.hash==='#thseats')thsLoad()},60e3)}
+  setTimeout(thsMap,0)}
+window.THS_OK=false;
+(async()=>{const preview=/[?&]thseats\b/.test(location.search);if(!THS_PUBLIC&&!preview)return;
+  let loc='';const ctl=new AbortController();setTimeout(()=>ctl.abort(),5000);
+  try{const t=await (await fetch('https://1.1.1.1/cdn-cgi/trace',{signal:ctl.signal})).text();loc=(t.match(/loc=(\w+)/)||[])[1]||''}catch(e){}
+  if(!loc){try{loc=(await (await fetch('https://ipapi.co/country/')).text()).trim()}catch(e){}}
+  if(loc!=='TH')return;window.THS_OK=true;document.querySelector('nav.tabs a.thtab').hidden=false;if(location.hash==='#thseats')route()})();
+
 /* ---------- router ---------- */
-const VIEWS_OK=['tour','songs','news','ticket','random','jinday'];
-function route(){const h=location.hash.slice(1);const v=VIEWS_OK.includes(h)&&!(h==='jinday'&&!jdItems().length)?h:'tour';
+const VIEWS_OK=['tour','songs','news','ticket','random','jinday','thseats'];
+function route(){const h=location.hash.slice(1);const v=VIEWS_OK.includes(h)&&!(h==='jinday'&&!jdItems().length)&&!(h==='thseats'&&!window.THS_OK)?h:'tour';
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
   document.querySelectorAll('nav.tabs a').forEach(x=>x.classList.toggle('on',x.dataset.v===v));
-  if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);}
+  if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);if(v==='thseats')thsOpen();}
 window.addEventListener('hashchange',()=>{route();gc('tab-'+(VIEWS_OK.includes(location.hash.slice(1))?location.hash.slice(1):'tour'))});
 renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();renderJinDay();route();{const h=location.hash.slice(1);if(h&&h!=='tour'&&VIEWS_OK.includes(h))gcLater('tab-'+h)}
   {const b=document.getElementById('jdshow');if(b)b.onclick=()=>{document.getElementById('jdgate').style.display='none';const m=document.getElementById('jdmsg');m.style.display='';gc('jinday-show-map');jdLoad()}}renderMap();
