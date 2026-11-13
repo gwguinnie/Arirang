@@ -1043,7 +1043,7 @@ function thsDraw(){const svg=document.getElementById('thsSvg');if(!svg)return;co
     g+=`<path d="${thsArc(s.r0,s.r1,s.a0,s.a1)}" fill="${L===1?'#f2b3bd':thsFill(n,max)}" stroke="#111" stroke-width="${L===4?.35:.6}" data-k="${k}"/>`});
   if(L<4){const fa=agg.A||0,fv=agg.V||0;
     g+=`<path d="${thsRing(64,110)}" fill-rule="evenodd" fill="${L===1?'#f2b3bd':thsFill(fa,max)}" stroke="#111" stroke-width=".6" data-k="A"/><path d="${thsRing(24,62)}" fill-rule="evenodd" fill="${L===1?'#e9667a':thsFill(fv,max)}" stroke="#111" stroke-width=".6" data-k="V"/>`}
-  g+=`<path d="M${TCX-74},${TCY-62} L${TCX+74},${TCY+62} M${TCX+74},${TCY-62} L${TCX-74},${TCY+62}" stroke="#fff" stroke-width="${L===4?4:8}" pointer-events="none"/><circle cx="${TCX}" cy="${TCY}" r="15" fill="#fff" stroke="#111" stroke-width=".8" pointer-events="none"/>`+thsT(TCX,TCY+2.6,'STAGE',7,'#111','BS',0);
+  g+=(L===4?'':`<path d="M${TCX-74},${TCY-62} L${TCX+74},${TCY+62} M${TCX+74},${TCY-62} L${TCX-74},${TCY+62}" stroke="#fff" stroke-width="8" pointer-events="none"/>`)+`<circle cx="${TCX}" cy="${TCY}" r="15" fill="#fff" stroke="#111" stroke-width=".8" pointer-events="none"/>`+thsT(TCX,TCY+2.6,'STAGE',7,'#111','BS',0);
   if(L===1){const tot=rows.length;g+=`<rect x="${TCX-74}" y="${TCY-26}" width="148" height="52" rx="10" fill="#fff" stroke="#111" stroke-width="2" pointer-events="none"/>`+thsT(TCX,TCY-1,'🇹🇭 '+tot.toLocaleString(),23,'#ee1d3e','BS',0)+thsT(TCX,TCY+16,'Thai ARMY registered',8,'#555','DM',0)}
   if(L===2){for(const d in THS_DIR){const [a0,a1]=THS_DIR[d],am=(a0+a1)/2,[x,y]=TP((d==='E'||d==='W')?154:154,am);g+=thsT(x,y+5,d+' '+(agg[d]||0),15)}
     g+=thsT(TCX,TCY-70,'A '+(agg.A||0),13)+thsT(TCX+40,TCY+4,'V '+(agg.V||0),11)}
