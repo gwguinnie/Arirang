@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-14 (เที่ยง)
+- Jin, j-hope, Jimin reserve training photos on Weverse (Korea Times) https://koreatimes.co.kr/lifestyle/people-events/20261113/from-world-tour-to-military-uniforms-bts-reports-for-reserve-duty
+- "Purple Jakarta" decorations planned ahead of December shows (ANTARA) https://en.antaranews.com/news/442355/jakarta-to-turn-purple-ahead-of-bts-concert-in-december
+
 ## 2026-11-13 (เที่ยง)
 - V first reserve forces training, Instagram photos (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111309130822643
 - Jin tops Podoal weekly Member ranking, Nov week 1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111308180186440
