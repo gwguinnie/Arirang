@@ -94,6 +94,12 @@ nav.tabs a.thtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.thtab.on{backgrou
 #thsChips{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 10px;min-height:4px}#thsChips span{border:2px solid #111;border-radius:7px;padding:2px 8px;font:400 11.5px var(--mono)}
 #thsEmo{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}#thsEmo button{border:2px solid #ddd;border-radius:10px;background:#fff;padding:7px 0;cursor:pointer}#thsEmo button span{font:22px/1.1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;display:block}#thsEmo button small{font:400 9px var(--mono);color:#666}#thsEmo button.on{border-color:#ee1d3e;background:#fff0f2}
 #thsSubmit{width:100%;margin-top:14px;background:#ee1d3e;color:#fff;border:2px solid #111;border-radius:10px;padding:11px;font:700 22px var(--cond);letter-spacing:.06em;box-shadow:4px 4px 0 #111;cursor:pointer}
+#thsKinds{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}#thsKinds span{border:1.5px solid #111;border-radius:7px;padding:2px 8px;font:400 11px var(--mono);background:#fff}
+#thsKind{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:12px}#thsKind button{border:2px solid #ddd;border-radius:10px;background:#fff;padding:8px 4px 7px;font:600 12px/1.25 var(--sans);color:#111;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+#thsKind button span{font:22px/1 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif}#thsKind button small{font:400 9.5px/1.25 var(--mono);color:#666}#thsKind button.on{border-color:#111;background:#ffe9ec;box-shadow:2px 2px 0 #111}
+.thsobox{border:1.5px dashed #888;border-radius:8px;padding:8px 10px;font:400 12px/1.5 var(--sans);margin-bottom:12px;background:#fafafa}
+#thsOutside{padding:8px 12px 10px;border-top:1px solid #eee;font:600 13px var(--sans);display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px}#thsOutside em{flex-basis:100%;font:400 11px var(--mono);color:#555;font-style:normal}
+.thsf .thsp.k{background:#f3f3f3}
 #thsFErr{color:#d4002a;font:400 12px var(--mono);margin-top:8px;min-height:1px}
 .thsfine{font:400 10.5px/1.5 var(--mono);color:#666;margin-top:10px}
 #thsGate{position:fixed;inset:0;background:rgba(17,17,17,.55);display:flex;align-items:center;justify-content:center;z-index:80;padding:16px}
@@ -431,7 +437,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
     <div class="win"><div class="bar"><span>rajamangala_live.exe</span><span>■ ■ ✕</span></div>
       <div class="pad" style="padding:14px 14px 4px">
         <span class="thstape">THAI ARMY ONLY 🇹🇭</span><div class="thsh">HOHEEHOHEHOHEHOHIW</div>
-        <div class="thssub" id="thsTotal">loading…</div>
+        <div class="thssub" id="thsTotal">loading…</div><div id="thsKinds"></div>
         <div class="thsnote">ⓘ Numbers only count seats submitted on this page — not official ticket data.</div>
         <div id="thsDays"><button class="on" data-d="3 Dec 2026">3 Dec</button><button data-d="5 Dec 2026">5 Dec</button><button data-d="6 Dec 2026">6 Dec</button></div>
         <div id="thsErr" class="thssub" style="color:#d4002a"></div>
@@ -443,16 +449,20 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
       <div id="thsInfo" hidden></div>
       <div class="thssec">BY TICKET PRICE</div><div id="thsPrice"></div>
       <div class="thssrc">🇹🇭 = seats submitted here only. Seats per price: <a id="thsSrc" target="_blank" rel="noopener">@_candyclover on X</a> (from the official seating plan · 65,473 seats total)</div>
+      <div class="thssec">NO TICKET · AT THE VENUE</div><div id="thsOutside"></div>
       <div class="thssec">LATEST</div><div id="thsFeed"></div><div style="height:8px"></div>
     </div>
     <div class="win"><div class="bar"><span>th_seats.exe</span><span>■ ■ ✕</span></div>
       <div class="thsform">
         <div style="font:700 28px var(--cond);margin-bottom:12px">TH SEATS 🇹🇭</div>
         <label for="thsDate">Show date *</label><select id="thsDate"></select>
-        <label for="thsSec">Section *</label><select id="thsSec"></select><div id="thsChips"></div>
+        <label>Your ticket *</label><div id="thsKind"><button type="button" data-k="seat"><span>🎟️</span>I know my seat</button><button type="button" data-k="price"><span>💳</span>Price only<small>package / seat not yet known</small></button><button type="button" data-k="out"><span>🚶</span>No ticket<small>going to the venue</small></button></div>
+        <div id="thsSecBox" hidden><label for="thsSec">Section *</label><select id="thsSec"></select><div id="thsChips"></div></div>
+        <div id="thsPBox" hidden><label for="thsPSel">Ticket price *</label><select id="thsPSel"></select></div>
+        <div id="thsOBox" hidden><div class="thsobox">🚶 You'll be counted in <b>NO TICKET · AT THE VENUE</b> — not on the seat map.</div></div>
         <label>Your emoji *</label><div id="thsEmo"></div>
         <button id="thsSubmit" type="button">SUBMIT 🇹🇭</button>
-        <div id="thsFErr"></div><div id="thsDone" hidden>Thank you 💜 your seat is in — it shows on the map within ~5 minutes</div>
+        <div id="thsFErr"></div><div id="thsDone" hidden>Thank you 💜 you're in — it shows here within ~5 minutes</div>
         <div class="thsfine">anonymous · no name, no row, no seat number · can't be edited after submit · a random device code is saved to stop spam — no personal data</div>
       </div></div>
     <div id="thsModal" hidden><div class="card"><div class="bar"><span>before_you_submit.exe</span><span>✕</span></div><div class="pad">
@@ -1013,6 +1023,9 @@ THS_STANDS.forEach(([st,letters])=>{const dir=st[0],tier=+st[1],L=Array.isArray(
   L.forEach((l,i)=>{const code=l.length>1?dir+l:st+l;THS_SEC[code]={code,area:dir,tier,group:st,price:thsPrice(dir,tier,l),a0:A0+(A1-A0)*i/L.length,a1:A0+(A1-A0)*(i+1)/L.length,r0,r1}})});
 for(let i=1;i<=24;i++){const c=175-(i-1)*15;THS_SEC['A'+i]={code:'A'+i,area:'A',tier:0,group:'A',price:'p68',a0:c-7.5,a1:c+7.5,r0:64,r1:108,floor:1}}
 for(let i=1;i<=16;i++){const c=175-(i-1)*22.5;THS_SEC['V'+i]={code:'V'+i,area:'V',tier:0,group:'V',price:'vip',a0:c-11.25,a1:c+11.25,r0:24,r1:60,floor:1}}
+const THS_PCODE={VIP:'vip','6800':'p68','6300':'p63','5300':'p53','4300':'p43','3300':'p33'};
+const thsKind=c=>THS_SEC[c]?'seat':(c==='OUTSIDE'?'out':(/^PRICE-/.test(c)&&THS_PCODE[c.slice(6)]?'price':''));
+const thsPriceOf=c=>THS_SEC[c]?THS_SEC[c].price:(THS_PCODE[(c||'').slice(6)]||'');
 const THS_AREA_NAME={S:'S · south',N:'N · north',E:'E · east',W:'W · west',A:'Floor A',V:'Floor V · VIP'};
 let thsRows=[],thsDay='3 Dec 2026',thsPending=[];
 function thsDevice(){let d;try{d=localStorage.getItem('ths_dev')}catch(e){}if(!d){d='d-'+Math.random().toString(36).slice(2,8)+Date.now().toString(36).slice(-3);try{localStorage.setItem('ths_dev',d)}catch(e){}}return d}
@@ -1025,7 +1038,7 @@ function thsTime(s){const m=String(s).match(/(\d+)[\/\-.](\d+)[\/\-.](\d+)[ ,T]+
 function thsAgo(t){if(!t)return '';const s=Math.max(0,(Date.now()-t)/1000);if(s<60)return 'just now';if(s<3600)return Math.floor(s/60)+' min ago';if(s<86400)return Math.floor(s/3600)+' h ago';return Math.floor(s/86400)+' d ago'}
 const thsSleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function thsFetchCSV(){let last;for(let i=0;i<3;i++){try{const r=await fetch(THS_CSV,{cache:'no-cache'});if(!r.ok)throw new Error('http '+r.status);const t=await r.text();if(!/^[^\n]*,/.test(t)||/<html/i.test(t.slice(0,200)))throw new Error('not csv');return t}catch(e){last=e;await thsSleep(i?7000:2500)}}throw last}
-function thsUse(text){const rows=thsCSV(text).slice(1).filter(r=>r.length>=4&&THS_SEC[(r[2]||'').trim().toUpperCase()]);
+function thsUse(text){const rows=thsCSV(text).slice(1).filter(r=>r.length>=4&&thsKind((r[2]||'').trim().toUpperCase()));
   thsRows=rows.map(r=>({t:thsTime(r[0]),day:(r[1]||'').trim(),sec:r[2].trim().toUpperCase(),emo:(r[3]||'').trim()}));thsRender()}
 let thsBusy=false;
 async function thsLoad(){if(thsBusy)return;thsBusy=true;const n=document.getElementById('thsErr');
@@ -1054,7 +1067,7 @@ function thsDraw(){const svg=document.getElementById('thsSvg');if(!svg)return;co
   if(L<4){const fa=agg.A||0,fv=agg.V||0;
     g+=`<path d="${thsRing(64,110)}" fill-rule="evenodd" fill="${L===1?'#f2b3bd':thsFill(fa,max)}" stroke="#111" stroke-width=".6" data-k="A"/><path d="${thsRing(24,62)}" fill-rule="evenodd" fill="${L===1?'#e9667a':thsFill(fv,max)}" stroke="#111" stroke-width=".6" data-k="V"/>`}
   g+=(L===4?'':`<path d="M${TCX-74},${TCY-62} L${TCX+74},${TCY+62} M${TCX+74},${TCY-62} L${TCX-74},${TCY+62}" stroke="#fff" stroke-width="8" pointer-events="none"/>`)+`<circle cx="${TCX}" cy="${TCY}" r="15" fill="#fff" stroke="#111" stroke-width=".8" pointer-events="none"/>`+thsT(TCX,TCY+2.6,'STAGE',7,'#111','BS',0);
-  if(L===1){const tot=rows.length;g+=`<rect x="${TCX-74}" y="${TCY-26}" width="148" height="52" rx="10" fill="#fff" stroke="#111" stroke-width="2" pointer-events="none"/>`+thsT(TCX,TCY-1,'🇹🇭 '+tot.toLocaleString(),23,'#ee1d3e','BS',0)+thsT(TCX,TCY+16,'Thai ARMY registered',8,'#555','DM',0)}
+  if(L===1){const tot=rows.filter(r=>THS_SEC[r.sec]).length;g+=`<rect x="${TCX-74}" y="${TCY-26}" width="148" height="52" rx="10" fill="#fff" stroke="#111" stroke-width="2" pointer-events="none"/>`+thsT(TCX,TCY-1,'🇹🇭 '+tot.toLocaleString(),23,'#ee1d3e','BS',0)+thsT(TCX,TCY+16,'seats on the map',8,'#555','DM',0)}
   if(L===2){for(const d in THS_DIR){const [a0,a1]=THS_DIR[d],am=(a0+a1)/2,[x,y]=TP((d==='E'||d==='W')?154:154,am);g+=thsT(x,y+5,d+' '+(agg[d]||0),15)}
     g+=thsT(TCX,TCY-70,'A '+(agg.A||0),13)+thsT(TCX+40,TCY+4,'V '+(agg.V||0),11)}
   if(L===3){THS_STANDS.forEach(([st])=>{const d=st[0],t=+st[1],[a0,a1]=THS_DIR[d],[r0,r1]=THS_TIER[t],[x,y]=TP((r0+r1)/2,(a0+a1)/2);g+=thsT(x,y+3,st+' '+(agg[st]||0),8.5)});
@@ -1094,29 +1107,37 @@ function thsMap(){const box=document.getElementById('thsMap');if(!box||box._ok)r
 }
 function thsRender(){thsDraw();const rows=thsRows.filter(r=>r.day===thsDay);
   document.getElementById('thsTotal').textContent=`🇹🇭 ${rows.length.toLocaleString()} Thai ARMY registered · ${THS_DAYS.find(d=>d[0]===thsDay)[1]}`;
-  const pc={};rows.forEach(r=>{const p=THS_SEC[r.sec].price;pc[p]=(pc[p]||0)+1});
+  const kc={seat:0,price:0,out:0};rows.forEach(r=>{kc[thsKind(r.sec)]++});
+  document.getElementById('thsKinds').innerHTML=`<span>🎟️ seat ${kc.seat.toLocaleString()}</span><span>💳 price only ${kc.price.toLocaleString()}</span><span>🚶 no ticket ${kc.out.toLocaleString()}</span>`;
+  document.getElementById('thsOutside').innerHTML=`🚶 ${kc.out.toLocaleString()} Thai ARMY without a ticket<em>not counted in the map or %</em>`;
+  const pc={};rows.forEach(r=>{const p=thsPriceOf(r.sec);if(p)pc[p]=(pc[p]||0)+1});
   document.getElementById('thsPrice').innerHTML=Object.entries(THS_PRICE).map(([k,[n,c,cap]])=>{const f=pc[k]||0,p=f/cap*100;return `<div class="thsrow"><div class="thsrt"><i style="background:${c}"></i>${n}<span>${f.toLocaleString()} / ${cap.toLocaleString()} seats</span></div><div class="thsbar"><i style="width:${f?Math.max(.8,p):0}%"></i></div><div class="thsrp">🇹🇭 ${p.toFixed(1)}% · 🫥 ${(100-p).toFixed(1)}%</div></div>`}).join('');
   const now=Date.now();thsPending=thsPending.filter(p=>now-p.t<10*60e3);
   const latest=[...thsPending.filter(p=>p.day===thsDay).map(p=>Object.assign({pending:1},p)),...rows.slice().sort((a,b)=>(b.t||0)-(a.t||0))].slice(0,7);
-  document.getElementById('thsFeed').innerHTML=latest.length?latest.map(r=>{const s=THS_SEC[r.sec],[pn,pcol]=THS_PRICE[s.price];return `<div class="thsf"><span class="e">${esc(r.emo)}</span><b>${esc(r.sec)}</b><span class="thsp"><i style="background:${pcol}"></i>${esc(pn.replace('VIP · ',''))}</span><small>${r.pending?'just now · syncing':thsAgo(r.t)}</small></div>`}).join(''):'<div class="thsempty">no seats yet for this day — be the first 🇹🇭</div>';
+  document.getElementById('thsFeed').innerHTML=latest.length?latest.map(r=>{const k=thsKind(r.sec),p=thsPriceOf(r.sec),[pn,pcol]=p?THS_PRICE[p]:['',''];const tag=k==='out'?'<span class="thsp k">🚶 no ticket</span>':`<span class="thsp"><i style="background:${pcol}"></i>${esc(pn.replace('VIP · ',''))}${k==='price'?' · price only':''}</span>`;return `<div class="thsf"><span class="e">${esc(r.emo)}</span><b>${k==='seat'?esc(r.sec):(k==='price'?'💳':'—')}</b>${tag}<small>${r.pending?'just now · syncing':thsAgo(r.t)}</small></div>`}).join(''):'<div class="thsempty">no seats yet for this day — be the first 🇹🇭</div>';
 }
 function thsForm(){
   const sel=document.getElementById('thsSec');const groups=[['Floor · VIP','V'],['Floor · A','A'],['South (S1 · S2)','S'],['North (N1 · N2)','N'],['East (E1 · E2 · E3)','E'],['West (W1 · W2 · W3)','W']];
   sel.innerHTML='<option value="">choose section</option>'+groups.map(([lab,a])=>`<optgroup label="${lab}">`+Object.values(THS_SEC).filter(s=>s.area===a).sort((x,y)=>x.code.localeCompare(y.code,'en',{numeric:true})).map(s=>`<option>${s.code}</option>`).join('')+'</optgroup>').join('');
   const chips=document.getElementById('thsChips');
   sel.onchange=()=>{const s=THS_SEC[sel.value];chips.innerHTML=s?[THS_AREA_NAME[s.area],s.tier?'tier '+s.tier:''].filter(Boolean).map(t=>`<span>${t}</span>`).join('')+`<span style="background:${THS_PRICE[s.price][1]};color:#fff;border-color:#111">${THS_PRICE[s.price][0]}</span>`:'';err('')};
+  let kind='';const kb=document.getElementById('thsKind'),psel=document.getElementById('thsPSel');
+  psel.innerHTML='<option value="">choose price</option>'+Object.entries(THS_PCODE).map(([c,k])=>`<option value="PRICE-${c}">${THS_PRICE[k][0]}</option>`).join('');
+  const setKind=k=>{kind=k;kb.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===k));['Sec','P','O'].forEach((n,i)=>{document.getElementById('ths'+n+'Box').hidden=(['seat','price','out'][i]!==k)});err('')};
+  kb.onclick=e=>{const b=e.target.closest('button');if(b)setKind(b.dataset.k)};
+  const secVal=()=>kind==='seat'?sel.value:kind==='price'?psel.value:kind==='out'?'OUTSIDE':'';
   const ds=document.getElementById('thsDate');ds.innerHTML='<option value="">choose show</option>'+THS_DAYS.map(([v])=>`<option>${v}</option>`).join('');
   let emo='';const eg=document.getElementById('thsEmo');eg.innerHTML=THS_EMO.map(([e,n])=>`<button type="button" data-e="${e}" aria-label="${n}"><span>${e}</span></button>`).join('');
   eg.onclick=e=>{const b=e.target.closest('button');if(!b)return;emo=b.dataset.e;eg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));err('')};
   const err=t=>{document.getElementById('thsFErr').textContent=t};
   const modal=document.getElementById('thsModal'),ck=document.getElementById('thsCk'),go=document.getElementById('thsGo');
-  document.getElementById('thsSubmit').onclick=()=>{if(!ds.value)return err('Choose your show date');if(!sel.value)return err('Choose your section');if(!emo)return err('Pick your emoji');ck.checked=false;go.disabled=true;modal.hidden=false};
+  document.getElementById('thsSubmit').onclick=()=>{if(!ds.value)return err('Choose your show date');if(!kind)return err('Tell us about your ticket');if(!secVal())return err(kind==='seat'?'Choose your section':'Choose your ticket price');if(!emo)return err('Pick your emoji');ck.checked=false;go.disabled=true;modal.hidden=false};
   ck.onchange=()=>{go.disabled=!ck.checked};
   document.getElementById('thsBack').onclick=()=>{modal.hidden=true};
-  go.onclick=async()=>{go.disabled=true;const body=new URLSearchParams({[THS_ENT.date]:ds.value,[THS_ENT.sec]:sel.value,[THS_ENT.emo]:emo,[THS_ENT.dev]:thsDevice()});
-    try{await fetch(THS_FORM,{method:'POST',mode:'no-cors',body});thsPending.unshift({t:Date.now(),day:ds.value,sec:sel.value,emo});gc('thseats-submit');
+  go.onclick=async()=>{go.disabled=true;const body=new URLSearchParams({[THS_ENT.date]:ds.value,[THS_ENT.sec]:secVal(),[THS_ENT.emo]:emo,[THS_ENT.dev]:thsDevice()});
+    try{await fetch(THS_FORM,{method:'POST',mode:'no-cors',body});thsPending.unshift({t:Date.now(),day:ds.value,sec:secVal(),emo});gc('thseats-submit');
       modal.hidden=true;document.getElementById('thsDone').hidden=false;setTimeout(()=>{document.getElementById('thsDone').hidden=true},4000);
-      sel.value='';chips.innerHTML='';emo='';eg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));thsRender()}
+      sel.value='';psel.value='';setKind('');chips.innerHTML='';emo='';eg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));thsRender()}
     catch(e){modal.hidden=true;err('Couldn\'t send — check your internet and try again')}};
 }
 let thsInit=false;
