@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-13",
+"updated": "2026-11-16",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -240,6 +240,35 @@ window.JINDAY={
 "post": "https://x.com/seokjin_th/status/2120144854386954333",
 "img": "jinday/seokjinth-concert.jpg",
 "maps": "https://maps.app.goo.gl/qHmRv4TRe42SX3SKA"
+},
+{
+"name": "HAPPY BIRTHDAY JIN – from LATAM · Vehicle Ad Banner",
+"owner": "LATAM",
+"type": "vehicle ad banner",
+"dates": [
+"2026-12-03"
+],
+"place": "Rajamangala National Stadium",
+"desc": "Vehicle ad banners at the stadium — with love from LATAM 🇦🇷🇧🇷🇨🇴🇵🇪🇲🇽🇨🇱.",
+"lat": 13.7557,
+"lng": 100.6217,
+"img": "jinday/latam-vehicle.jpg",
+"post": "https://x.com/btsyear134340/status/2122017568953073775"
+},
+{
+"name": "2026 HAPPY JIN DAY PROJECT by KONI · Siam Square Light Poles",
+"owner": "KONI",
+"type": "digital screens",
+"dates": [
+"2026-12-04"
+],
+"time": "10:00–22:00",
+"place": "Siam Square Walking Street / Soi 7 · BTS Siam (Exit 2 or 4)",
+"desc": "Bangkok birthday ad support — Siam Square Series Light Poles: 20 digital screens on 10 light poles along the sidewalk.",
+"lat": 13.7446,
+"lng": 100.5345,
+"img": "jinday/koni-siam-lightpoles.jpg",
+"post": "https://x.com/btsforever1207/status/2121522116550185429"
 }
 ]
 };
