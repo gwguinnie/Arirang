@@ -1,5 +1,10 @@
 # BTS news log
 
+## 2026-11-16 (เที่ยง)
+- BTS 6 awards at MMA 2026 incl. Artist of the Year + Album of the Year (Korea Herald) https://www.koreaherald.com/article/10937987
+- Jin thanks ARMY on Weverse after MMA wins (StarNews) https://www.starnewskorea.com/en/music/2026/11/16/2026111606581316837
+- Jimin #1 Nov boy group member brand reputation (StarNews) https://www.starnewskorea.com/en/music/2026/11/14/2026111408415390935
+
 ## 2026-11-14 (เที่ยง)
 - Jin, j-hope, Jimin reserve training photos on Weverse (Korea Times) https://koreatimes.co.kr/lifestyle/people-events/20261113/from-world-tour-to-military-uniforms-bts-reports-for-reserve-duty
 - "Purple Jakarta" decorations planned ahead of December shows (ANTARA) https://en.antaranews.com/news/442355/jakarta-to-turn-purple-ahead-of-bts-concert-in-december
