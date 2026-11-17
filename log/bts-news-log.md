@@ -1,5 +1,10 @@
 # BTS news log
 
+## 2026-11-17 (เที่ยง)
+- Jin Chwae-dol 'Angel of Giving' + 'Charity Fairy' (StarNews) https://www.starnewskorea.com/en/music/2026/11/17/2026111707035196351
+- Official ARIRANG photo-spot installation at Kaohsiung World Games Stadium (ETtoday) https://star.ettoday.net/news/3273261
+- V Weverse post after MMA: no Korean year-end award shows due to tour (KpopStarz) https://www.kpopstarz.com/articles/323432/20261116/bts-v-explains-korean-year-end-award-show-absence.htm
+
 ## 2026-11-16 (เที่ยง)
 - BTS 6 awards at MMA 2026 incl. Artist of the Year + Album of the Year (Korea Herald) https://www.koreaherald.com/article/10937987
 - Jin thanks ARMY on Weverse after MMA wins (StarNews) https://www.starnewskorea.com/en/music/2026/11/16/2026111606581316837
