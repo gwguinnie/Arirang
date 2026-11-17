@@ -726,7 +726,7 @@ function renderNews(){
   const b=bkkNow(),hNow=b.getUTCHours();const nxt=hNow<12?'12:00':'00:00';
   let upd='—';if(NEWS.updated){const u=new Date(new Date(NEWS.updated).getTime()+7*3600e3);upd=`${u.getUTCDate()} ${MON[u.getUTCMonth()]} ${pad(u.getUTCHours())}:${pad(u.getUTCMinutes())}`}
   document.getElementById('newshead').innerHTML=`<span>updated <b>${upd}</b></span><span>next check ${nxt} (BKK) ⟳</span>`;
-  const items=(NEWS.items||[]);
+  const items=(NEWS.items||[]).slice(0,7);
   const red=new Set(['tour','award','release','concert']);
   document.getElementById('news').innerHTML=items.length?items.map(n=>`<div class="ni"><div class="tp"><span class="cat ${red.has((n.cat||'').toLowerCase())?'r':''}">${esc(n.cat||'news')}</span><span class="dt">${n.date?fmt(n.date):''}</span></div><h4>${esc(n.text)}</h4>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.source||'source')} ↗</a>`:''}</div>`).join(''):'<div class="empty">no news yet — the board is checked at 12:00 and 00:00 (Bangkok) ♡</div>';
 }
