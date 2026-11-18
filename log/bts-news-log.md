@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-18 (เที่ยง)
+- Jin, j-hope, Jimin, V, Jung Kook depart Gimpo for Kaohsiung (StarNews) https://starnewskorea.com/en/music/2026/11/18/2026111813375551884
+- RM new hairstyle Instagram post, trends on X (Billboard) https://www.billboard.com/music/music-news/bts-rm-changes-hair-trending-x-1236384178/
+
 ## 2026-11-17 (เที่ยง)
 - Jin Chwae-dol 'Angel of Giving' + 'Charity Fairy' (StarNews) https://www.starnewskorea.com/en/music/2026/11/17/2026111707035196351
 - Official ARIRANG photo-spot installation at Kaohsiung World Games Stadium (ETtoday) https://star.ettoday.net/news/3273261
