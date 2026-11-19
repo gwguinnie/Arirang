@@ -1,6 +1,6 @@
 /* ARIRANG World Tour Tracker data. Edit the JSON below; keep it valid JSON. */
 window.TOUR={
- "updated": "2026-11-09",
+ "updated": "2026-11-19",
  "source_note": "Tour: Wikipedia/Live Nation. Surprise songs: btsboy.com, Wikipedia, Forbes.",
  "legs": [
   "Opening · Korea & Japan",
@@ -726,6 +726,10 @@ window.TOUR={
   "2026-10-31": [
    "Ddaeng",
    "BTS Cypher Pt.3: Killer"
+  ],
+  "2026-11-19": [
+   "DNA",
+   "Answer: Love Myself"
   ]
  },
  "mainset": [
