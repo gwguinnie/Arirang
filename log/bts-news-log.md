@@ -1,5 +1,8 @@
 # BTS news log
 
+## 2026-11-19 (เที่ยง)
+- Kaohsiung purple city: landmarks lit, ARMY traffic lights, 613 Shuttle (StarNews) https://www.starnewskorea.com/en/music/2026/11/18/2026111817411678917
+
 ## 2026-11-18 (เที่ยง)
 - Jin, j-hope, Jimin, V, Jung Kook depart Gimpo for Kaohsiung (StarNews) https://starnewskorea.com/en/music/2026/11/18/2026111813375551884
 - RM new hairstyle Instagram post, trends on X (Billboard) https://www.billboard.com/music/music-news/bts-rm-changes-hair-trending-x-1236384178/
