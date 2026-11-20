@@ -1,5 +1,10 @@
 # BTS news log
 
+## 2026-11-20 (เที่ยง)
+- Billboard JAPAN: BTS first overseas artist 10B cumulative streams in Japan (StarNews) https://www.starnewskorea.com/en/music/2026/11/20/2026112013285674869
+- Jin tops Idol Pick weekly male vote, 5th straight week, 77th No.1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/20/2026112008193373359
+- Members visit Kaohsiung Liuhe Night Market, win pig doll (StarNews) https://starnewskorea.com/es/music/2026/11/19/2026111916590156428
+
 ## 2026-11-19 (เที่ยง)
 - Kaohsiung purple city: landmarks lit, ARMY traffic lights, 613 Shuttle (StarNews) https://www.starnewskorea.com/en/music/2026/11/18/2026111817411678917
 
