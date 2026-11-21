@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-21 (เที่ยง)
+- MAMA 2026 Osaka: BTS Artist of the Year daesang + Best Male Group + Fans' Choice Top 10 (StarNews) https://starnewskorea.com/en/broadcast-show/2026/11/20/2026112022395713245
+- Jin No.1 Idol Champ x Forbes Korea 'perfect chemistry with anyone' poll, 51.84% (StarNews) https://starnewskorea.com/en/music/2026/11/21/2026112108004385575
+
 ## 2026-11-20 (เที่ยง)
 - Billboard JAPAN: BTS first overseas artist 10B cumulative streams in Japan (StarNews) https://www.starnewskorea.com/en/music/2026/11/20/2026112013285674869
 - Jin tops Idol Pick weekly male vote, 5th straight week, 77th No.1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/20/2026112008193373359
