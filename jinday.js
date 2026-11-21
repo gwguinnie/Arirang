@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-16",
+"updated": "2026-11-21",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -269,6 +269,21 @@ window.JINDAY={
 "lng": 100.5345,
 "img": "jinday/koni-siam-lightpoles.jpg",
 "post": "https://x.com/btsforever1207/status/2121522116550185429"
+},
+{
+"name": "Happy SeokJin Day Food Support 🐹🌸 A Little Treat for Every ARMY",
+"owner": "@springday_09 × @Iluvthere4iam",
+"type": "food support",
+"dates": [
+"2026-12-03",
+"2026-12-05"
+],
+"place": "Rajamangala National Stadium",
+"desc": "3 Dec — SUPER Pad Thai 🍝 (300 servings) by @springday_09 · 5 Dec — WWH omelette rice 🍳 (200 servings) by @Iluvthere4iam.",
+"lat": 13.7549,
+"lng": 100.6228,
+"post": "https://x.com/springday_09/status/2124029432008720520",
+"img": "jinday/springday-food-support.jpg"
 }
 ]
 };
