@@ -736,7 +736,7 @@ window.TOUR={
    "Boy In Luv"
   ],
   "2026-11-22": [
-   "Blanket Kick",
+   "Blanket Kick / Embarrassed",
    "Boy With Luv"
   ]
  },
@@ -964,7 +964,7 @@ window.TOUR={
     "Let Me Know",
     "Rain",
     "BTS Cypher Pt.3: Killer",
-    "Blanket Kick",
+    "Blanket Kick / Embarrassed",
     "24/7=Heaven",
     "Look Here",
     "2nd Grade",
