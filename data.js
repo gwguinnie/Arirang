@@ -1,6 +1,6 @@
 /* ARIRANG World Tour Tracker data. Edit the JSON below; keep it valid JSON. */
 window.TOUR={
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "source_note": "Tour: Wikipedia/Live Nation. Surprise songs: btsboy.com, Wikipedia, Forbes.",
  "legs": [
   "Opening · Korea & Japan",
@@ -734,6 +734,10 @@ window.TOUR={
   "2026-11-21": [
    "Sea",
    "Boy In Luv"
+  ],
+  "2026-11-22": [
+   "Blanket Kick",
+   "Boy With Luv"
   ]
  },
  "mainset": [
@@ -960,7 +964,7 @@ window.TOUR={
     "Let Me Know",
     "Rain",
     "BTS Cypher Pt.3: Killer",
-    "Embarrassed",
+    "Blanket Kick",
     "24/7=Heaven",
     "Look Here",
     "2nd Grade",
