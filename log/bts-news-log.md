@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-22 (เที่ยง)
+- MAMA 2026 Day 2: BTS Album of the Year (ARIRANG) + j-hope ft. SPAGHETTI Best Collaboration (Koreaboo) https://www.koreaboo.com/news/winners-2026-mamas-day-two/
+- Jung Kook Kaohsiung Threads video, Tsai Ing-wen Korean comment (Sports Kyunghyang) https://sports.khan.co.kr/en/article/202611221221007/
+
 ## 2026-11-21 (เที่ยง)
 - MAMA 2026 Osaka: BTS Artist of the Year daesang + Best Male Group + Fans' Choice Top 10 (StarNews) https://starnewskorea.com/en/broadcast-show/2026/11/20/2026112022395713245
 - Jin No.1 Idol Champ x Forbes Korea 'perfect chemistry with anyone' poll, 51.84% (StarNews) https://starnewskorea.com/en/music/2026/11/21/2026112108004385575
