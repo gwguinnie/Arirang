@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-21",
+"updated": "2026-11-23",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -62,7 +62,7 @@ window.JINDAY={
 "desc": "A massive 30m × 12.5m outdoor billboard.",
 "lat": 13.7600826,
 "lng": 100.6232867,
-"post": "https://x.com/ChinaJinBar/status/2116154267988033683",
+"post": "https://x.com/jin_fantree/status/2124775408050766149",
 "img": "jinday/jinfantree-maplestory5.jpg",
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
