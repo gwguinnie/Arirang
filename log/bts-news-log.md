@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-23 (เที่ยง)
+- BTS 7 members arrive Incheon Nov 23 after Kaohsiung shows (StarNews) https://www.starnewskorea.com/en/music/2026/11/23/2026112303250248855
+- Jimin Weverse letter after MAMA wins, 'deserve to be loved' (StarNews) https://www.starnewskorea.com/en/music/2026/11/22/2026112207410285179
+
 ## 2026-11-22 (เที่ยง)
 - MAMA 2026 Day 2: BTS Album of the Year (ARIRANG) + j-hope ft. SPAGHETTI Best Collaboration (Koreaboo) https://www.koreaboo.com/news/winners-2026-mamas-day-two/
 - Jung Kook Kaohsiung Threads video, Tsai Ing-wen Korean comment (Sports Kyunghyang) https://sports.khan.co.kr/en/article/202611221221007/
