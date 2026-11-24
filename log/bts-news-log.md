@@ -1,5 +1,11 @@
 # BTS news log
 
+## 2026-11-24 (เที่ยง)
+- Jimin keywords top trending 10+ regions, 3 days after Kaohsiung (StarNews) https://www.starnewskorea.com/en/music/2026/11/24/2026112408345454926
+- Jin No.1 MyOnePick October Charity Star (StarNews) https://www.starnewskorea.com/en/music/2026/11/24/2026112408302836086
+- Jin, V, Jung Kook 'human tripod' at final Kaohsiung show (StarNews) https://starnewskorea.com/en/music/2026/11/23/2026112316240974703
+- Jung Kook Kaohsiung vlog 41M views <26h, Kaohsiung mayor comment (StarNews) https://www.starnewskorea.com/en/music/2026/11/23/2026112307090410578
+
 ## 2026-11-23 (เที่ยง)
 - BTS 7 members arrive Incheon Nov 23 after Kaohsiung shows (StarNews) https://www.starnewskorea.com/en/music/2026/11/23/2026112303250248855
 - Jimin Weverse letter after MAMA wins, 'deserve to be loved' (StarNews) https://www.starnewskorea.com/en/music/2026/11/22/2026112207410285179
@@ -50,6 +56,3 @@
 ## 2026-11-11 (เที่ยง)
 - Apple Music names BTS "SWIM" a global 2026 Best Song, first K-pop group (StarNews) https://starnewskorea.com/en/music/2026/11/11/2026111107063376958
 
-## 2026-11-10 (เที่ยง)
-- Jin tops Idol Pick weekly male idol vote, 4th straight week (StarNews) https://starnewskorea.com/en/music/2026/11/10/2026111008135721537
-- BIGHIT announces BTS WORLD TOUR ARIRANG IN LONDON concert QR-code package, Weverse Shop, out Dec 1 https://shop.weverse.io/en/shop/USD/artists/2/sales/71784
