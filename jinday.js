@@ -344,6 +344,21 @@ window.JINDAY={
 ],
 "post": "https://x.com/callmynamemeerj/status/2125093139488846015",
 "img": "jinday/pandasnowmoon-gcoffee.jpg"
+},
+{
+"name": "HAPPY JIN DAY IN BANGKOK · Banners & Life-size Photo Zones",
+"owner": "@jin_fantree × Team Kim Seokjin",
+"type": "photo zone",
+"dates": [
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06"
+],
+"place": "Plaza next to Rajamangala National Stadium (exact spot TBA)",
+"desc": "Two large metal-frame banners of Seokjin's many charms + three life-size photo zones — stand side by side with Seokjin and get the perfect shot!",
+"post": "https://x.com/jin_fantree/status/2123602823124574662",
+"img": "jinday/jinfantree-photozone.jpg"
 }
 ]
 };
