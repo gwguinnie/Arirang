@@ -286,7 +286,7 @@ window.JINDAY={
 "img": "jinday/springday-food-support.jpg"
 },
 {
-"name": "#JinDay_with_Real_Jin · G Coffee Cup Sleeves",
+"name": "JinDay_with_Real_Jin · G Coffee Cup Sleeves",
 "owner": "PandaSnowmoon",
 "type": "cup sleeves",
 "dates": [
