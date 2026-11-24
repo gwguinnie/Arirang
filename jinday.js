@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-23",
+"updated": "2026-11-24",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -284,6 +284,66 @@ window.JINDAY={
 "lng": 100.6228,
 "post": "https://x.com/springday_09/status/2124029432008720520",
 "img": "jinday/springday-food-support.jpg"
+},
+{
+"name": "#JinDay_with_Real_Jin · G Coffee Cup Sleeves",
+"owner": "PandaSnowmoon",
+"type": "cup sleeves",
+"dates": [
+"2026-11-28",
+"2026-11-29",
+"2026-11-30",
+"2026-12-01",
+"2026-12-02",
+"2026-12-03",
+"2026-12-04"
+],
+"place": "G Coffee · 8 MRT stations (Blue Line)",
+"desc": "Jin birthday cup sleeves (2 designs) at G Coffee branches inside 8 MRT stations — tap a station below for directions.",
+"locs": [
+{
+"label": "MRT Phahon Yothin",
+"lat": 13.81367,
+"lng": 100.5612
+},
+{
+"label": "MRT Lat Phrao",
+"lat": 13.80621,
+"lng": 100.57317
+},
+{
+"label": "MRT Huai Khwang",
+"lat": 13.7786,
+"lng": 100.57372
+},
+{
+"label": "MRT Thailand Cultural Centre",
+"lat": 13.76598,
+"lng": 100.57027
+},
+{
+"label": "MRT Phra Ram 9",
+"lat": 13.75767,
+"lng": 100.56519
+},
+{
+"label": "MRT Phetchaburi",
+"lat": 13.7487,
+"lng": 100.56345
+},
+{
+"label": "MRT Sukhumvit",
+"lat": 13.73763,
+"lng": 100.5608
+},
+{
+"label": "MRT Queen Sirikit National Convention Centre",
+"lat": 13.72314,
+"lng": 100.55995
+}
+],
+"post": "https://x.com/callmynamemeerj/status/2125093139488846015",
+"img": "jinday/pandasnowmoon-gcoffee.jpg"
 }
 ]
 };
