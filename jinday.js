@@ -195,24 +195,6 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 },
 {
-"name": "UNION MALL LED Ads",
-"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
-"type": "LED screens",
-"place": "Union Mall, Lat Phrao",
-"desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
-"lat": 13.8133637,
-"lng": 100.5618612,
-"maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8",
-"post": "https://x.com/jin_fantree/status/2118896205895963081"
-},
-{
-"name": "Outdoor Plaza Banner Exhibition",
-"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
-"type": "banner exhibition",
-"desc": "Banner exhibition in an outdoor plaza.",
-"post": "https://x.com/jin_fantree/status/2118896205895963081"
-},
-{
 "name": "HAPPY JIN DAY 2026 · Large LED Screen at SILOM CONNECTED",
 "owner": "@jin_fantree × Team Kim Seokjin",
 "type": "LED screen",
@@ -367,6 +349,26 @@ window.JINDAY={
 "desc": "Two large metal-frame banners of Seokjin's many charms + three life-size photo zones — stand side by side with Seokjin and get the perfect shot!",
 "post": "https://x.com/jin_fantree/status/2123602823124574662",
 "img": "jinday/jinfantree-photozone.jpg"
+}
+],
+"hidden": [
+{
+"name": "UNION MALL LED Ads",
+"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
+"type": "LED screens",
+"place": "Union Mall, Lat Phrao",
+"desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
+"lat": 13.8133637,
+"lng": 100.5618612,
+"maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8",
+"post": "https://x.com/jin_fantree/status/2118896205895963081"
+},
+{
+"name": "Outdoor Plaza Banner Exhibition",
+"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
+"type": "banner exhibition",
+"desc": "Banner exhibition in an outdoor plaza.",
+"post": "https://x.com/jin_fantree/status/2118896205895963081"
 }
 ]
 };
