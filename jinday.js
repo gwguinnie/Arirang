@@ -368,20 +368,31 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
 "post": "https://x.com/jin_fantree/status/2125428700489646395",
 "img": "jinday/jinfantree-brave-laneige.jpg"
+},
+{
+"name": "❤️ HAPPY JIN DAY 2026 · 53 LED Screens at UNION MALL",
+"owner": "@jin_fantree × Team Kim Seokjin",
+"type": "LED screens",
+"dates": [
+"2026-12-01",
+"2026-12-02",
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06",
+"2026-12-07"
+],
+"time": "11:00–22:00",
+"place": "UNION MALL (near BTS Ha Yaek Lat Phrao)",
+"desc": "53 LED screens filled with JIN — THE CORE LED display (48 screens, from the big centre pillar up to the ceiling) + THE RUNWAY LED display (5 screens). 30 sec per play, 66 times a day (hours based on THE RUNWAY).",
+"post": "https://x.com/jin_fantree/status/2125520889467023424",
+"img": "jinday/jinfantree-unionmall-led.jpg",
+"lat": 13.8133637,
+"lng": 100.5618612,
+"maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8"
 }
 ],
 "hidden": [
-{
-"name": "UNION MALL LED Ads",
-"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
-"type": "LED screens",
-"place": "Union Mall, Lat Phrao",
-"desc": "Ads on 53 LED screens: THE CORE (48) + THE RUNWAY (5).",
-"lat": 13.8133637,
-"lng": 100.5618612,
-"maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8",
-"post": "https://x.com/jin_fantree/status/2118896205895963081"
-},
 {
 "name": "Outdoor Plaza Banner Exhibition",
 "owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
