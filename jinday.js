@@ -407,6 +407,21 @@ window.JINDAY={
 "post": "https://x.com/latinoatunas/status/2125432863575134709",
 "img": "jinday/latinoatunas-mexico-trucks.jpg",
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
+},
+{
+"name": "🇬🇹🇸🇻 GUATEMALA AND EL SALVADOR ARRIVE IN BANGKOK! · Billboard Truck",
+"owner": "@JINSPACELATAM × @JINELSALVADOR",
+"type": "billboard truck",
+"dates": [
+"2026-12-06"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "Two countries, two flags, one shared wish — a billboard truck sending Jin all the love from Guatemala & El Salvador 💗",
+"lat": 13.7605826,
+"lng": 100.6238867,
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
+"post": "https://x.com/jinelsalvador/status/2125383933856567789",
+"img": "jinday/jinelsalvador-truck.jpg"
 }
 ],
 "hidden": [
