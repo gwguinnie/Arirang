@@ -1,5 +1,11 @@
 # BTS news log
 
+## 2026-11-25 (เที่ยง)
+- Jung Kook 'Standing Next to You' 100M streams Billboard Japan (Korea Herald) https://www.koreaherald.com/article/10948782
+- Jin 'Epiphany' in 'K-Pop: The Debut' trailer (StarNews) https://www.starnewskorea.com/en/music/2026/11/25/2026112508260692517
+- V memorised Naatu Naatu, RRR team thanks V & Jung Kook (Gulf News) https://gulfnews.com/entertainment/bts-v-has-memorised-naatu-naatu-dance-rrr-team-thanks-him-and-jung-kook-1.500759307
+- V reserve training '5 kills' viral posts (Korea Herald) https://www.koreaherald.com/article/10947905
+
 ## 2026-11-24 (เที่ยง)
 - Jimin keywords top trending 10+ regions, 3 days after Kaohsiung (StarNews) https://www.starnewskorea.com/en/music/2026/11/24/2026112408345454926
 - Jin No.1 MyOnePick October Charity Star (StarNews) https://www.starnewskorea.com/en/music/2026/11/24/2026112408302836086
@@ -52,7 +58,4 @@
 ## 2026-11-12 (เที่ยง)
 - Jung Kook GOLDEN 156 straight weeks on Spotify global weekly albums chart (StarNews) https://www.starnewskorea.com/en/music/2026/11/12/2026111207264279186
 - Jung Kook Instagram record: most posts with 1M+ shares (9), ahead of Messi (StarNews) https://starnewskorea.com/en/star/2026/11/11/2026111108002190530
-
-## 2026-11-11 (เที่ยง)
-- Apple Music names BTS "SWIM" a global 2026 Best Song, first K-pop group (StarNews) https://starnewskorea.com/en/music/2026/11/11/2026111107063376958
 
