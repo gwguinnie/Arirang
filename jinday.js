@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-24",
+"updated": "2026-11-25",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -213,16 +213,24 @@ window.JINDAY={
 "post": "https://x.com/jin_fantree/status/2118896205895963081"
 },
 {
-"name": "Suvarnabhumi Airport Digital Ads",
-"owner": "@jin_fantree × @ChinaJinBar × @hourjinnie",
-"type": "airport screens",
-"status": "pending confirmation",
-"place": "Suvarnabhumi International Airport",
-"desc": "Digital ads on 250 screens.",
-"lat": 13.69,
-"lng": 100.7501,
-"maps": "https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport",
-"post": "https://x.com/jin_fantree/status/2118896205895963081"
+"name": "HAPPY JIN DAY 2026 · Large LED Screen at SILOM CONNECTED",
+"owner": "@jin_fantree × Team Kim Seokjin",
+"type": "LED screen",
+"dates": [
+"2026-12-01",
+"2026-12-02",
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06",
+"2026-12-07"
+],
+"place": "SILOM CONNECTED @ MRT Silom Station",
+"desc": "Jin birthday ad on the large LED screen at SILOM CONNECTED.",
+"lat": 13.72935,
+"lng": 100.5362,
+"post": "https://x.com/jin_fantree/status/2125363544548131007",
+"img": "jinday/jinfantree-silom-led.jpg"
 },
 {
 "name": "Happy Birthday Kim Seokjin in BKK · Concert Project",
