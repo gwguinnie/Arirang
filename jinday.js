@@ -349,6 +349,25 @@ window.JINDAY={
 "desc": "Two large metal-frame banners of Seokjin's many charms + three life-size photo zones — stand side by side with Seokjin and get the perfect shot!",
 "post": "https://x.com/jin_fantree/status/2123602823124574662",
 "img": "jinday/jinfantree-photozone.jpg"
+},
+{
+"name": "❤️ HAPPY JIN DAY IN BANGKOK 🇹🇭 · Special Free Gifts (LANEIGE)",
+"owner": "@laneigeth",
+"type": "free gift",
+"dates": [
+"2026-12-03",
+"2026-12-04",
+"2026-12-05",
+"2026-12-06"
+],
+"time": "11:00–17:00",
+"place": "BREVE Café, Ramkhamhaeng 24, Huamark, Bang Kapi",
+"desc": "Visit the cafe and get 1 LANEIGE sample set (2 samples) free — NO DRINK PURCHASE REQUIRED! While supplies last.",
+"lat": 13.7534428,
+"lng": 100.6219119,
+"maps": "https://maps.app.goo.gl/1FWze9ZyDT3KF6pG6",
+"post": "https://x.com/jin_fantree/status/2125428700489646395",
+"img": "jinday/jinfantree-brave-laneige.jpg"
 }
 ],
 "hidden": [
