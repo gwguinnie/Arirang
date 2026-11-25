@@ -390,6 +390,23 @@ window.JINDAY={
 "lat": 13.8133637,
 "lng": 100.5618612,
 "maps": "https://maps.app.goo.gl/jcCv8eEshULBu2Ts8"
+},
+{
+"name": "🇲🇽💗 MEXICO WILL BE IN BANGKOK FOR JIN DAY! · Mobile Billboard Trucks",
+"owner": "@JINSPACE × @LATINOATUNAS",
+"type": "billboard trucks",
+"dates": [
+"2026-12-03",
+"2026-12-05",
+"2026-12-06"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "Two mobile billboard trucks bringing all of Mexico's love to Bangkok throughout the three concert days — MÉXICO LOVES JIN 🇲🇽🐹",
+"lat": 13.7604826,
+"lng": 100.6234867,
+"post": "https://x.com/latinoatunas/status/2125432863575134709",
+"img": "jinday/latinoatunas-mexico-trucks.jpg",
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39"
 }
 ],
 "hidden": [
