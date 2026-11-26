@@ -439,6 +439,21 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
 "post": "https://x.com/kimseokjinchile/status/2125770105434870206",
 "img": "jinday/kimseokjinchile-truck.jpg"
+},
+{
+"name": "🇭🇳🇺🇾 Honduras and Uruguay · Happy JinDay Billboard Truck",
+"owner": "@seokjin_hn",
+"type": "billboard truck",
+"dates": [
+"2026-12-03"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "A little piece of Honduras and Uruguay travelling all the way to Bangkok — across oceans and thousands of miles, to send Jin all our love and celebrate his birthday together 🌍❤️",
+"lat": 13.7599826,
+"lng": 100.6235867,
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
+"post": "https://x.com/seokjin_hn/status/2125818597637247061",
+"img": "jinday/seokjinhn-truck.jpg"
 }
 ],
 "hidden": [
