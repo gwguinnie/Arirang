@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-26 (เที่ยง)
+- Jung Kook APEA 2026 Asia-Pacific Young Leaders Under 30 (StarNews) https://starnewskorea.com/en/music/2026/11/26/2026112606375053288
+- Jin Idol Pick Nov week 3, 6th straight week, 78th No.1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/26/2026112606324281083
+
 ## 2026-11-25 (เที่ยง)
 - Jung Kook 'Standing Next to You' 100M streams Billboard Japan (Korea Herald) https://www.koreaherald.com/article/10948782
 - Jin 'Epiphany' in 'K-Pop: The Debut' trailer (StarNews) https://www.starnewskorea.com/en/music/2026/11/25/2026112508260692517
@@ -54,8 +58,3 @@
 - V first reserve forces training, Instagram photos (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111309130822643
 - Jin tops Podoal weekly Member ranking, Nov week 1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111308180186440
 - Jimin "Who" 175M Spotify Japan streams, in Spotify Japan 10th Anniversary Playlist (StarNews) https://starnewskorea.com/en/music/2026/11/12/2026111207285680042
-
-## 2026-11-12 (เที่ยง)
-- Jung Kook GOLDEN 156 straight weeks on Spotify global weekly albums chart (StarNews) https://www.starnewskorea.com/en/music/2026/11/12/2026111207264279186
-- Jung Kook Instagram record: most posts with 1M+ shares (9), ahead of Messi (StarNews) https://starnewskorea.com/en/star/2026/11/11/2026111108002190530
-
