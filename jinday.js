@@ -470,6 +470,21 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
 "post": "https://x.com/seokjinmexico/status/2125762171917201627",
 "img": "jinday/seokjinmexico-display.jpg"
+},
+{
+"name": "🇵🇾 JIN DAY IN BANGKOK · With Love from Paraguay Billboard Truck",
+"owner": "@ksjteampy",
+"type": "billboard truck",
+"dates": [
+"2026-12-03"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "A billboard truck outside the concert with all our love from Paraguay 💜 Two designs: \"JINCEMBER Season\" and \"HAPPY 진 DAY — your happiness is our greatest treasure\". Design by @braveastronaut4.",
+"lat": 13.7598326,
+"lng": 100.6243867,
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
+"post": "https://x.com/ksjteampy/status/2125961238282727499",
+"img": "jinday/ksjteampy-truck.jpg"
 }
 ],
 "hidden": [
