@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-25",
+"updated": "2026-11-26",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -422,6 +422,23 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
 "post": "https://x.com/jinelsalvador/status/2125383933856567789",
 "img": "jinday/jinelsalvador-truck.jpg"
+},
+{
+"name": "🇨🇱 Happy Jin Day from CHILE · Billboard Truck",
+"owner": "@kimseokjinchile",
+"type": "billboard truck",
+"dates": [
+"2026-12-03",
+"2026-12-05",
+"2026-12-06"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "\"From the end of the world to Thailand: Jin, wherever you are, Chile will always be there for you\" — a billboard truck from Chilean ARMY 💜",
+"lat": 13.7601826,
+"lng": 100.6241867,
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
+"post": "https://x.com/kimseokjinchile/status/2125770105434870206",
+"img": "jinday/kimseokjinchile-truck.jpg"
 }
 ],
 "hidden": [
