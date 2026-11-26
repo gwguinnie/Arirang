@@ -454,6 +454,22 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
 "post": "https://x.com/seokjin_hn/status/2125818597637247061",
 "img": "jinday/seokjinhn-truck.jpg"
+},
+{
+"name": "🇲🇽🩷 Happy JinDay from Mexico to Bangkok · Billboard Truck",
+"owner": "@seokjinmexico",
+"type": "billboard truck",
+"dates": [
+"2026-12-05",
+"2026-12-06"
+],
+"place": "SAT Market (ตลาด กกท.), near Rajamangala National Stadium",
+"desc": "A billboard truck bringing Mexico to Thailand so our love can be there on Jin's most special days — \"Through every season and across the ocean, Mexico's endless love will always reach you\" 🇲🇽🩷",
+"lat": 13.7603326,
+"lng": 100.6229867,
+"maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
+"post": "https://x.com/seokjinmexico/status/2125762171917201627",
+"img": "jinday/seokjinmexico-display.jpg"
 }
 ],
 "hidden": [
