@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-26",
+"updated": "2026-11-27",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -485,6 +485,22 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/Ym4usDbBJ8hePWW39",
 "post": "https://x.com/ksjteampy/status/2125961238282727499",
 "img": "jinday/ksjteampy-truck.jpg"
+},
+{
+"name": "🎂🐟 Jin Day Charity #ShareLoveWithJin",
+"owner": "@ThenativePanda × @RainyNAMJIN",
+"type": "charity",
+"dates": [
+"2026-12-04"
+],
+"time": "11:00",
+"place": "Suea Yai Baby Home (บ้านเด็กอ่อนเสือใหญ่), Ratchadaphisek Soi 36",
+"desc": "Lunch for the 50 children at Suea Yai Baby Home to share Jin's birthday joy. Free to join — DM to sign up by 1 Dec (parking provided).",
+"lat": 13.8258,
+"lng": 100.5752,
+"maps": "https://maps.app.goo.gl/RrjFzGM9PDZGg3p36",
+"post": "https://x.com/rainynamjin/status/2126180248085827881",
+"img": "jinday/sharelovewithjin-charity.jpg"
 }
 ],
 "hidden": [
