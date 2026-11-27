@@ -1,5 +1,8 @@
 # BTS news log
 
+## 2026-11-27 (เที่ยง)
+- Jung Kook features on Code Kunst 'Love Is Blind' (Prankstar, Dec 3) (Variety India) https://varietyindia.com/love-is-blind-bts-jungkook-feature-code-kunsts-album-prankstar/
+
 ## 2026-11-26 (เที่ยง)
 - Jung Kook APEA 2026 Asia-Pacific Young Leaders Under 30 (StarNews) https://starnewskorea.com/en/music/2026/11/26/2026112606375053288
 - Jin Idol Pick Nov week 3, 6th straight week, 78th No.1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/26/2026112606324281083
@@ -54,7 +57,3 @@
 - Jin, j-hope, Jimin reserve training photos on Weverse (Korea Times) https://koreatimes.co.kr/lifestyle/people-events/20261113/from-world-tour-to-military-uniforms-bts-reports-for-reserve-duty
 - "Purple Jakarta" decorations planned ahead of December shows (ANTARA) https://en.antaranews.com/news/442355/jakarta-to-turn-purple-ahead-of-bts-concert-in-december
 
-## 2026-11-13 (เที่ยง)
-- V first reserve forces training, Instagram photos (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111309130822643
-- Jin tops Podoal weekly Member ranking, Nov week 1 (StarNews) https://www.starnewskorea.com/en/music/2026/11/13/2026111308180186440
-- Jimin "Who" 175M Spotify Japan streams, in Spotify Japan 10th Anniversary Playlist (StarNews) https://starnewskorea.com/en/music/2026/11/12/2026111207285680042
