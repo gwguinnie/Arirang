@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-27",
+"updated": "2026-11-28",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -501,6 +501,20 @@ window.JINDAY={
 "maps": "https://maps.app.goo.gl/RrjFzGM9PDZGg3p36",
 "post": "https://x.com/rainynamjin/status/2126180248085827881",
 "img": "jinday/sharelovewithjin-charity.jpg"
+},
+{
+"name": "🩷 JIN PINK BEAN BIRTHDAY PROJECT",
+"owner": "@jinnieslamp",
+"type": "fan event",
+"dates": [
+"2026-12-06"
+],
+"place": "Rajamangala National Stadium",
+"desc": "Join us on December 6 as we celebrate Jin's birthday with Pink Bean! 🩷",
+"lat": 13.7547,
+"lng": 100.6219,
+"post": "https://x.com/jinnieslamp/status/2126345760203813283",
+"img": "jinday/jinnieslamp-pinkbean.jpg"
 }
 ],
 "hidden": [
