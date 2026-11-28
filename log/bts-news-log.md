@@ -1,5 +1,9 @@
 # BTS news log
 
+## 2026-11-28 (เที่ยง)
+- Melon Global-K Chart report: BTS No.1 combined 59/143 days, top on Melon/Tencent/Line (Korea Herald) https://www.koreaherald.com/article/10952210
+- Taiwan ARMY 'Sea Turtle Strategy' privacy campaign (Korea Herald) https://www.koreaherald.com/article/10950516
+
 ## 2026-11-27 (เที่ยง)
 - Jung Kook features on Code Kunst 'Love Is Blind' (Prankstar, Dec 3) (Variety India) https://varietyindia.com/love-is-blind-bts-jungkook-feature-code-kunsts-album-prankstar/
 
