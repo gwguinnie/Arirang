@@ -120,8 +120,9 @@ nav.tabs a.thtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.thtab.on{backgrou
 /* jin day (pink) */
 [hidden]{display:none!important}
 nav.tabs a.jdtab{border-color:#e87ea3;color:#b23a66}
+nav.tabs a.gvtab{border-color:#ee1d3e;color:#ee1d3e}nav.tabs a.gvtab.on{background:#ee1d3e;border-color:#ee1d3e;color:#fff}
 nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
-@media(max-width:560px){nav.tabs{flex-wrap:wrap}nav.tabs a{flex:1 1 15%}nav.tabs a[data-v=random]{flex:1.9 1 26%}nav.tabs a.jdtab{flex:1 1 100%}nav.tabs a.thtab{flex:1 1 100%}}
+@media(max-width:560px){nav.tabs{flex-wrap:wrap}nav.tabs a{flex:1 1 15%}nav.tabs a[data-v=random]{flex:1.9 1 26%}nav.tabs a.jdtab,nav.tabs a.gvtab{flex:1 1 40%}nav.tabs a.thtab{flex:1 1 100%}}
 .jd{--pk:#e87ea3;--pk2:#b23a66;--pkl:#ffe4ee;--pkb:#f4b6ca;--pi:#3a1622}
 .jdwin{background:#fff7fa;border:2px solid var(--pi);border-radius:16px;overflow:hidden;color:var(--pi)}
 .jdhead{padding:16px 16px 10px;background:var(--pkl) radial-gradient(#f8c3d4 1.2px,transparent 1.2px) 0 0/11px 11px}
@@ -138,6 +139,9 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
 .jdchips{display:flex;gap:6px;flex-wrap:wrap;padding:12px 14px 4px}
 .jdchip{border:1.5px solid var(--pk);color:var(--pk2);background:#fff;border-radius:99px;padding:5px 12px;font:400 12px var(--mono);cursor:pointer}
 .jdchip.on{background:var(--pk);color:#fff}
+.jdwin.gv{margin-top:0}.gvgrid{display:grid;grid-template-columns:1fr;gap:12px;padding:12px 14px 6px}@media(min-width:640px){.gvgrid{grid-template-columns:1fr 1fr}}
+.gvn{margin:0;background:#fff;border:2px solid var(--pkb);border-radius:12px;overflow:hidden}.gvn img{display:block;width:100%;aspect-ratio:2576/1130;object-fit:cover;background:var(--pkl)}
+.gvn figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;font:400 11px var(--mono);color:var(--pi)}.gvn .jdbtn{text-decoration:none;white-space:nowrap}
 .jdlist{padding:8px 14px 4px;display:grid;gap:10px}
 .jdcard{display:flex;gap:12px;padding:10px;border:1.5px solid var(--pkb);border-radius:14px;background:#fff;cursor:pointer;text-align:left}
 .jdcard.sel{border:2px solid var(--pk);box-shadow:0 0 0 3px var(--pkl)}
@@ -358,6 +362,7 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
     <a class="tag" href="#ticket" data-v="ticket">Ticket</a>
     <a class="tag" href="#random" data-v="random">Surprise Song</a>
     <a class="tag jdtab" href="#jinday" data-v="jinday" hidden>JIN DAY 🎂</a>
+    <a class="tag gvtab" href="#giveaway" data-v="giveaway">GIVEAWAY 🎁</a>
     <a class="tag thtab" href="#thseats" data-v="thseats" hidden>hoheehohehohehohiw 🇹🇭</a>
   </nav>
 
@@ -428,6 +433,13 @@ nav.tabs a.jdtab.on{background:#e87ea3;border-color:#e87ea3;color:#fff}
         <div><div class="jdchips" id="jdchips"></div><div class="jdlist" id="jdlist"></div>
         <div class="jdfoot">fan-made ♡ info from each project owner — check their post before you go</div></div>
       </div>
+    </div>
+  </section>
+  <section class="view jd" id="v-giveaway">
+    <div class="jdwin gv" id="gvbox">
+      <div class="jdhead"><span class="jdtape">ONLINE GIVEAWAY 🎁</span><h2>Souvenir Notes</h2><div class="jdsub">BTS WORLD TOUR 'ARIRANG' IN BANGKOK · 4 designs · free to download & print</div></div>
+      <div class="gvgrid"><figure class="gvn"><img src="jinday/giveaway/thumb-bts-bangkok.jpg" alt="BTS · ARIRANG BANGKOK souvenir note" loading="lazy"><figcaption><span>BTS · ARIRANG BANGKOK</span><a class="jdbtn p" href="jinday/giveaway/bts-bangkok.jpg" download="ARIRANG-BKK-bts-bangkok.jpg" target="_blank" rel="noopener" data-gv="bts-bangkok">⬇ Download</a></figcaption></figure><figure class="gvn"><img src="jinday/giveaway/thumb-jin-1.jpg" alt="HBD JIN · 01 souvenir note" loading="lazy"><figcaption><span>HBD JIN · 01</span><a class="jdbtn p" href="jinday/giveaway/jin-1.jpg" download="ARIRANG-BKK-jin-1.jpg" target="_blank" rel="noopener" data-gv="jin-1">⬇ Download</a></figcaption></figure><figure class="gvn"><img src="jinday/giveaway/thumb-jin-2.jpg" alt="HBD JIN · 02 souvenir note" loading="lazy"><figcaption><span>HBD JIN · 02</span><a class="jdbtn p" href="jinday/giveaway/jin-2.jpg" download="ARIRANG-BKK-jin-2.jpg" target="_blank" rel="noopener" data-gv="jin-2">⬇ Download</a></figcaption></figure><figure class="gvn"><img src="jinday/giveaway/thumb-jin-3.jpg" alt="HBD JIN · 03 souvenir note" loading="lazy"><figcaption><span>HBD JIN · 03</span><a class="jdbtn p" href="jinday/giveaway/jin-3.jpg" download="ARIRANG-BKK-jin-3.jpg" target="_blank" rel="noopener" data-gv="jin-3">⬇ Download</a></figcaption></figure></div>
+      <div class="jdfoot">fan-made souvenir — not real money ♡ by @guinislistening</div>
     </div>
   </section>
   <section class="view ths locked" id="v-thseats">
@@ -1179,13 +1191,13 @@ window.THS_OK=false;
   if(loc!=='TH')return;window.THS_OK=true;document.querySelector('nav.tabs a.thtab').hidden=false;if(location.hash==='#thseats')route()})();
 
 /* ---------- router ---------- */
-const VIEWS_OK=['tour','songs','news','ticket','random','jinday','thseats'];
+const VIEWS_OK=['tour','songs','news','ticket','random','jinday','giveaway','thseats'];
 function route(){const h=location.hash.slice(1);const v=VIEWS_OK.includes(h)&&!(h==='jinday'&&!jdItems().length)&&!(h==='thseats'&&!window.THS_OK)?h:'tour';
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));
   document.querySelectorAll('nav.tabs a').forEach(x=>x.classList.toggle('on',x.dataset.v===v));
   if(v==='tour'&&window._mapApply)setTimeout(window._mapApply,0);if(v==='thseats')thsOpen();}
 window.addEventListener('hashchange',()=>{route();gc('tab-'+(VIEWS_OK.includes(location.hash.slice(1))?location.hash.slice(1):'tour'))});
-renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();renderJinDay();route();{const h=location.hash.slice(1);if(h&&h!=='tour'&&VIEWS_OK.includes(h))gcLater('tab-'+h)}
+renderHero();renderStops();renderSongStats();renderAlbums();renderNews();initTicket();initRandom();renderJinDay();document.getElementById('gvbox')?.addEventListener('click',e=>{const a=e.target.closest('a[data-gv]');if(a)gc('giveaway-'+a.dataset.gv)});route();{const h=location.hash.slice(1);if(h&&h!=='tour'&&VIEWS_OK.includes(h))gcLater('tab-'+h)}
   {const b=document.getElementById('jdshow');if(b)b.onclick=()=>{document.getElementById('jdgate').style.display='none';const m=document.getElementById('jdmsg');m.style.display='';gc('jinday-show-map');jdLoad()}}renderMap();
 })();
 
