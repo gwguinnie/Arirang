@@ -1,5 +1,5 @@
 window.JINDAY={
-"updated": "2026-11-28",
+"updated": "2026-11-29",
 "items": [
 {
 "name": "Seokjin's Birthday Support Ad · MBK Center LED",
@@ -336,7 +336,7 @@ window.JINDAY={
 "img": "jinday/pandasnowmoon-gcoffee.jpg"
 },
 {
-"name": "HAPPY JIN DAY IN BANGKOK · Banners & Life-size Photo Zones",
+"name": "❤️ HAPPY JIN DAY IN BANGKOK · Wrap Banners & Hanbok Photo Zone",
 "owner": "@jin_fantree × Team Kim Seokjin",
 "type": "photo zone",
 "dates": [
@@ -345,10 +345,13 @@ window.JINDAY={
 "2026-12-05",
 "2026-12-06"
 ],
-"place": "Plaza next to Rajamangala National Stadium (exact spot TBA)",
-"desc": "Two large metal-frame banners of Seokjin's many charms + three life-size photo zones — stand side by side with Seokjin and get the perfect shot!",
-"post": "https://x.com/jin_fantree/status/2123602823124574662",
-"img": "jinday/jinfantree-photozone.jpg"
+"place": "Sundial Square, next to Rajamangala National Stadium",
+"desc": "2 large wrap banners (7 m and 4.8 m) + 3 life-size cutouts — Jin in hanbok and cute Wootteo. Drop by before or after the concert and make special memories with Seokjin!",
+"lat": 13.7538,
+"lng": 100.6238,
+"maps": "https://maps.app.goo.gl/pNR9iNRsXhX8CrcMA",
+"post": "https://x.com/jin_fantree/status/2126722639993733462",
+"img": "jinday/jinfantree-sundial-wrap.jpg"
 },
 {
 "name": "❤️ HAPPY JIN DAY IN BANGKOK 🇹🇭 · Special Free Gifts (LANEIGE)",
